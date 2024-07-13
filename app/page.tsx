@@ -1,7 +1,9 @@
+import Banner from "@/shared/components/Banner";
+
 export default function Home() {
   return (
-    <div className="bg-red-500">
-      Home page
+    <div className="flex flex-col justify-center items-center max-w-[1320px]">
+      <Banner />
     </div>
   );
 }
