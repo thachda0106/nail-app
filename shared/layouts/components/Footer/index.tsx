@@ -1,15 +1,33 @@
+"use client";
+
 import Link from "next/link";
 import { Box, Container, Fab, Stack, Typography } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import { STORE_INFORMATION } from "@/shared/constants/storeInformation";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { scrollToTopPage } from "@/shared/utils/scroll";
 
 const Footer = () => {
   const { Contacts, Location, OpeningHours, Socials } = STORE_INFORMATION;
 
   return (
-    <Box component={"footer"} className="pt-[100px] pb-[40px]">
+    <Box component={"footer"} className="pb-[40px]">
+      <Stack
+        component={"div"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        className="h-[100px] md:h-fit mt-0 md:my-[20px]"
+      >
+        <Fab
+          aria-label="add"
+          className="bg-gray-icon animate-bounce"
+          onClick={scrollToTopPage}
+        >
+          <KeyboardArrowUpIcon className="text-white font-bold" />
+        </Fab>
+      </Stack>
       <Container component={"div"}>
         <Stack
           component={"ul"}
@@ -114,12 +132,15 @@ const Footer = () => {
             />
           </Box>
         </Stack>
-        <Box component={"div"} className="text-gray-medium flex mt-5 flex-col items-end md:flex-row md:justify-between">
+        <Box
+          component={"div"}
+          className="text-gray-medium flex mt-5 flex-col items-end md:flex-row md:justify-between"
+        >
           <Typography component={"span"} className="w-fit">
             © 2024 Nail Store. All Rights Reserved.
           </Typography>
           <Typography component={"span"} className="w-fit">
-            Privacy Policy Terms & Conditions
+            Privacy Policy Terms & Conditions{" "}
           </Typography>
         </Box>
       </Container>
