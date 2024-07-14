@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Catamaran, Lora } from "next/font/google";
 import MainLayout from "@/shared/layouts/Main.layout";
+import AppTheme from "@themes/default.theme";
 
 const catamaran = Catamaran({
   weight: ["400", "600", "700", "900"],
@@ -42,9 +43,11 @@ export default function RootLayout({
           lora.variable
         )}
       >
-        <MainLayout>
-          <main>{children}</main>
-        </MainLayout>
+        <AppTheme>
+          <MainLayout>
+            <main>{children}</main>
+          </MainLayout>
+        </AppTheme>
       </body>
     </html>
   );

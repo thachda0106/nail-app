@@ -1,11 +1,11 @@
 import {
   ABOUT_ID,
-  BEAUTIFUL_DESCRIPTION,
-  BEAUTIFUL_OPTIONS_1,
-  BEAUTIFUL_OPTIONS_2,
-  BEAUTIFUL_OPTIONS_3,
-  BEAUTIFUL_TITLE,
-} from "@/shared/constants/common";
+  SKILL_NAIL_ART_DESCRIPTION,
+  SKILL_NAIL_ART_OPTIONS_1,
+  SKILL_NAIL_ART_OPTIONS_2,
+  SKILL_NAIL_ART_OPTIONS_3,
+  SKILL_NAIL_ART_TITLE,
+} from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
 import React, { Fragment } from "react";
 import BeautifulOption1 from "@assets/images/beautiful_1.jpg";
@@ -17,12 +17,12 @@ import Link from "next/link";
 import styles from "./index.module.css";
 
 const BeautifulList = [
-  { image: BeautifulOption1, label: BEAUTIFUL_OPTIONS_1 },
-  { image: BeautifulOption2, label: BEAUTIFUL_OPTIONS_2 },
-  { image: BeautifulOption3, label: BEAUTIFUL_OPTIONS_3 },
+  { image: BeautifulOption1, label: SKILL_NAIL_ART_OPTIONS_1 },
+  { image: BeautifulOption2, label: SKILL_NAIL_ART_OPTIONS_2 },
+  { image: BeautifulOption3, label: SKILL_NAIL_ART_OPTIONS_3 },
 ];
 
-const Beautiful = () => {
+const SkillNailArt = () => {
   return (
     <Box
       component={"section"}
@@ -30,17 +30,17 @@ const Beautiful = () => {
     >
       <Typography
         className={
-          "font-bold text-sm tracking-[1.5px] text-[#8e8987] font-catamaran"
+          "font-bold text-sm tracking-[1.5px] text-gray-primary font-catamaran"
         }
       >
-        {BEAUTIFUL_TITLE}
+        {SKILL_NAIL_ART_TITLE}
       </Typography>
       <Typography
         className={
-          "font-semibold text-[50px] tracking-[2px] text-[#373b4d] font-lora mb-6"
+          "font-semibold text-[50px] tracking-[2px] text-gray-base font-lora mb-6"
         }
       >
-        {BEAUTIFUL_DESCRIPTION}
+        {SKILL_NAIL_ART_DESCRIPTION}
       </Typography>
       <Stack
         className={"flex flex-row justify-between items-center w-full mb-20"}
@@ -71,7 +71,7 @@ const Beautiful = () => {
                   href={`#${ABOUT_ID}`}
                   scroll={true}
                   className={clsx(
-                    "w-fit font-lora text-2xl font-semibold text-[#373b4d] tracking-widest",
+                    "w-fit font-lora text-2xl font-semibold text-gray-base tracking-widest",
                     styles["animationText"]
                   )}
                 >
@@ -86,4 +86,4 @@ const Beautiful = () => {
   );
 };
 
-export default Beautiful;
+export default SkillNailArt;

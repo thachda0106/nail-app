@@ -1,0 +1,7 @@
+.bg {
+  position: relative;
+}
+
+.bg::after {
+  position: absolute;
+}

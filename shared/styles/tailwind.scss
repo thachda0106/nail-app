@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply scroll-smooth;
+  html,
+  body {
+    @apply scroll-smooth font-catamaran;
   }
 }

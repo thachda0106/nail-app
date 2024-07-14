@@ -7,7 +7,7 @@ import {
   BANNER_BUTTON,
   BANNER_DESCRIPTIONS,
   BANNER_TITLE,
-} from "@/shared/constants/common";
+} from "@constants/common";
 import Link from "next/link";
 import clsx from "clsx";
 
@@ -33,7 +33,7 @@ const Banner = () => {
             </Typography>
             <Button
               className={
-                "w-[200px] h-12 text-white uppercase bg-[#da3b85] border border-solid border-[#da3b85] hover:border-white font-catamaran font-bold rounded-none tracking-[2px]"
+                "w-[200px] h-12 text-white uppercase bg-pink-second border border-solid border-pink-second hover:border-white font-catamaran font-bold rounded-none tracking-[2px]"
               }
             >
               <Link href={`#${ABOUT_ID}`}>{BANNER_BUTTON}</Link>
