@@ -27,7 +27,9 @@
       "@utils/*": ["./shared/utils/*"],
       "@assets/*": ["./shared/assets/*"],
       "@constants/*": ["./shared/constants/*"],
-      "@themes/*": ["./shared/themes/*"]
+      "@themes/*": ["./shared/themes/*"],
+      "@types/*": ["./shared/types/*"],
+      "@helpers/*": ["./shared/helpers/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

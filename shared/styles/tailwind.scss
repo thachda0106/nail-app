@@ -7,4 +7,18 @@
   body {
     @apply scroll-smooth font-catamaran;
   }
+
+  @layer utilities {
+    .menu-underline {
+      transition: background-size 0.3s ease-in-out;
+      background-image: linear-gradient(#256646, #256646);
+      background-repeat: no-repeat;
+      background-position: 50% 100%;
+      background-size: 0 2px;
+    }
+
+    .menu-active {
+      background-size: 100% 2px;
+    }
+  }
 }

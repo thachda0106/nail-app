@@ -18,5 +18,6 @@ export const MENUS = [
   {
     name: "CONTACT",
     id: "#booking",
+    isLastMenu: true,
   },
 ];

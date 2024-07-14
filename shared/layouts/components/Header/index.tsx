@@ -12,6 +12,8 @@ import Link from "next/link";
 import MenuDrawer from "../MenuDrawer";
 import { MENUS } from "@constants/menus";
 import { useRouter } from "next/navigation";
+import { STORE_INFORMATION } from "@/shared/constants/storeInformation";
+import { scrollToElementById } from "@/shared/utils/scroll";
 
 const Header = () => {
   const [isOpenMenu, setOpenMenu] = useState(false);
@@ -31,7 +33,10 @@ const Header = () => {
             className="min-h-full transition-all ease-linear duration-300"
           >
             {isMobile && (
-              <Link href={"tel:0906303704"} className="self-center">
+              <Link
+                href={`tel:${STORE_INFORMATION.Contacts.phoneNumber}`}
+                className="self-center"
+              >
                 <PhoneIcon className="text-gray-icon text-[30px]" />
               </Link>
             )}
@@ -42,7 +47,7 @@ const Header = () => {
               fetchPriority="high"
               alt="logo"
               className="h-fit self-center cursor-pointer"
-              onClick={() => router.push('/')}
+              onClick={() => router.push("/")}
             />
             {isMobile ? (
               <Box
@@ -58,22 +63,25 @@ const Header = () => {
                 direction={"row"}
                 className="h-min gap-5 lg:gap-10"
               >
-                {MENUS.map(({ name, id }, index) => (
+                {MENUS.map(({ name, id, isLastMenu }, index) => (
                   <Box
                     key={index}
                     component={"li"}
-                    id={id}
                     className={`group h-[70px] flex items-center font-bold`}
+                    onClick={() => scrollToElementById(id)}
                   >
                     <Typography
                       component={"span"}
-                      className="hover:cursor-pointer text-black-thin text-sm font-semibold 
+                      className={`hover:cursor-pointer text-black-thin text-sm font-semibold 
                         group-last:bg-pink-primary group-last:h-[40px] group-last:w-[135px] 
-                        group-last:text-white group-last:text-center 
-                        group-last:border group-last:border-solid
+                        group-last:text-white group-last:text-center
+                        group-last:border group-last:border-solid group-last:hover:border-solid 
                         group-last:leading-[40px] group-last:hover:bg-transparent 
-                        group-last:hover:text-black-thin group-last:hover:border 
-                        group-last:hover:border-solid transition-all duration-300 ease-linear delay-75"
+                        group-last:hover:text-black-thin group-last:hover:border  
+                        transition-all duration-300 ease-in-out delay-75 
+                        ${
+                          isLastMenu ? "" : "menu-underline hover:menu-active"
+                        }`}
                     >
                       {name}
                     </Typography>
