@@ -63,7 +63,7 @@ const Header = () => {
                 direction={"row"}
                 className="h-min gap-5 lg:gap-10"
               >
-                {MENUS.map(({ name, id }, index) => (
+                {MENUS.map(({ name, id, isLastMenu }, index) => (
                   <Box
                     key={index}
                     component={"li"}
@@ -80,9 +80,7 @@ const Header = () => {
                         group-last:hover:text-black-thin group-last:hover:border  
                         transition-all duration-300 ease-in-out delay-75 
                         ${
-                          name === "CONTACT"
-                            ? ""
-                            : "menu-underline hover:menu-active"
+                          isLastMenu ? "" : "menu-underline hover:menu-active"
                         }`}
                     >
                       {name}
