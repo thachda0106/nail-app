@@ -10,7 +10,7 @@ const MainLayout: React.FC<PropsType> = ({ children }) => {
     <>
       <Header />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

@@ -11,5 +11,10 @@ export const STORE_INFORMATION = {
     'Mon-Fri: 06:00AM - 19:00PM',
     'Saturday: 10:00AM - 9:00PM',
     'Sunday: 10:00AM - 9:00PM',
-  ]
+  ],
+  Socials: {
+    Facebook: 'facebook.com',
+    Instagram: 'instagram.com',
+    Twitter: 'twitter.com',
+  }
 };
