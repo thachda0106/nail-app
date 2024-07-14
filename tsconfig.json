@@ -25,6 +25,7 @@
       "@layouts/*": ["./shared/layouts/*"],
       "@styles/*": ["./shared/styles/*"],
       "@utils/*": ["./shared/utils/*"],
+      "@assets/*": ["./shared/assets/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
