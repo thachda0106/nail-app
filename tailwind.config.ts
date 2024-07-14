@@ -15,6 +15,17 @@ const config: Config = {
         '2xl': '1440px',
       },
       colors: {
+        black: {
+          thin: '#383838',
+        },
+        pink: {
+          primary: '#fd1c79',
+        },
+        gray: {
+          icon: '#a9a9a9',
+          thin: '#00000021',
+          medium: '#6c757d',
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

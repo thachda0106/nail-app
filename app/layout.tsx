@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Catamaran } from "next/font/google";
 import MainLayout from "@/shared/layouts/Main.layout";
+import AppTheme from "@themes/default.theme";
 
 const catamaran = Catamaran({
   weight: ["100", "300", "400", "500", "600", "700", "900"],
@@ -25,9 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={catamaran.className}>
-        <MainLayout>
-          <main>{children}</main>
-        </MainLayout>
+        <AppTheme>
+          <MainLayout>
+            <main>{children}</main>
+          </MainLayout>
+        </AppTheme>
       </body>
     </html>
   );

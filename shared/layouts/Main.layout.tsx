@@ -8,7 +8,7 @@ interface PropsType {
 const MainLayout: React.FC<PropsType> = ({ children }) => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       {children}
       {/* <Footer /> */}
     </>
