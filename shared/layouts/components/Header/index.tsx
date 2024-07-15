@@ -14,22 +14,45 @@ import { MENUS } from "@constants/menus";
 import { useRouter } from "next/navigation";
 import { STORE_INFORMATION } from "@/shared/constants/storeInformation";
 import { scrollToElementById } from "@/shared/utils/scroll";
+import { useWindowScrollPositions } from "@/shared/hooks/useWindowScrollPositions";
+import LogoWhite from "@/public/assets/images/logo-white.png";
+import LogoBlack from "@/public/assets/images/logo-black.png";
+import clsx from "clsx";
 
 const Header = () => {
+  const { scrollY } = useWindowScrollPositions();
   const [isOpenMenu, setOpenMenu] = useState(false);
-  const isMobile = useMobileScreen(BREAK_POINTS.Medium);
+  const isMobile = useMobileScreen(BREAK_POINTS.Medium, false);
   const router = useRouter();
   const CurrentMenuIcon = isOpenMenu ? MenuOpenIcon : MenuIcon;
-  const logoPath = "/assets/images/logo-black.png";
+
+  const toggleClassNames = scrollY >= 50;
+
+  const logoPath = toggleClassNames ? LogoBlack : LogoWhite;
 
   return (
     <>
-      <Box component={"header"} className="shadow-lg">
-        <Container sx={{ height: 90 }} component={"div"} className="py-[10px]">
+      <Box
+        component={"header"}
+        className={clsx(
+          "fixed w-full z-[999999] transition-all duration-[450ms] ease-in-out",
+          {
+            ["bg-white shadow-lg"]: toggleClassNames,
+          }
+        )}
+      >
+        <Container
+          sx={{ height: toggleClassNames ? 70 : 90 }}
+          component={"div"}
+          className={clsx("transition-all duration-300 ease-in-out delay-75", {
+            ["py-[10px]"]: !toggleClassNames,
+          })}
+        >
           <Stack
             component={"div"}
             direction={"row"}
             justifyContent={"space-between"}
+            alignItems={"center"}
             className="min-h-full transition-all ease-linear duration-300"
           >
             {isMobile && (
@@ -72,17 +95,21 @@ const Header = () => {
                   >
                     <Typography
                       component={"span"}
-                      className={`hover:cursor-pointer text-black-thin text-sm font-semibold 
-                        group-last:bg-pink-primary group-last:h-[40px] group-last:w-[135px] 
-                        group-last:text-white group-last:text-center
+                      className={clsx(
+                        `hover:cursor-pointer text-sm font-semibold text-white
+                        group-last:bg-pink-second group-last:h-[40px] group-last:w-[135px] 
+                        group-last:text-center group-last:!text-white
                         group-last:border group-last:border-solid group-last:hover:border-solid 
                         group-last:leading-[40px] group-last:hover:bg-transparent 
-                        group-last:hover:text-black-thin group-last:hover:border  
-                        transition-all duration-300 ease-in-out delay-75
-                        group-last:cursor-pointer
-                        ${
-                          isLastMenu ? "" : "menu-underline hover:menu-active"
-                        }`}
+                        group-last:hover:text-white group-last:hover:border`,
+                        {
+                          ["menu-underline hover:menu-active"]: !isLastMenu,
+                          ["!text-black-thin"]: !!toggleClassNames,
+                          ["bg-image-white"]: !isLastMenu && !toggleClassNames,
+                          ["group-last:hover:!text-black-thin group-last:hover:!border-black-thin"]:
+                            !!toggleClassNames,
+                        }
+                      )}
                     >
                       {name}
                     </Typography>
