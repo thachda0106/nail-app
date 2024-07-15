@@ -16,7 +16,7 @@ const ShiningFeminine = () => {
     <Box
       component={"section"}
       className={
-        "relative w-full after:bg-smoke-primary after:absolute after:w-full after:left-0 after:top-0 after:h-full after:max-w-[1080px] my-20 after:-z-10"
+        "relative w-full after:bg-smoke-primary after:absolute after:w-full after:left-0 after:top-0 after:h-full after:max-w-[70%] my-20 after:-z-10"
       }
     >
       <SectionContent

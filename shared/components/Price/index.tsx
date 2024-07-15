@@ -1,4 +1,8 @@
-import { PRICE_DESCRIPTION, PRICE_TITLE } from "@constants/common";
+import {
+  PRICE_DESCRIPTION,
+  PRICE_ID_HREF,
+  PRICE_TITLE,
+} from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import Gel from "@assets/images/gel.png";
@@ -77,6 +81,7 @@ const Price = () => {
       className={
         "flex flex-col items-center gap-20 w-full max-w-[1080px] my-20"
       }
+      id={PRICE_ID_HREF}
     >
       <Stack direction={"row"} gap={8} width={"100%"} alignItems={"center"}>
         <Box width={"50%"} height={200} position={"relative"}>

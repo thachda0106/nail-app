@@ -4,6 +4,7 @@ import SectionContent from "../SectionContent";
 import Smile from "@assets/images/smile2.jpg";
 import {
   REVEAL_COLOURFUL_DESCRIPTION,
+  REVEAL_COLOURFUL_ID_HREF,
   REVEAL_COLOURFUL_ITEM_1,
   REVEAL_COLOURFUL_ITEM_2,
   REVEAL_COLOURFUL_LABEL,
@@ -18,6 +19,7 @@ const RevealColourful = () => {
       className={
         "relative w-full after:bg-smoke-primary after:absolute after:w-full after:right-0 after:top-0 after:h-full after:max-w-[1080px] my-20 after:-z-10"
       }
+      id={REVEAL_COLOURFUL_ID_HREF}
     >
       <SectionContent
         title={REVEAL_COLOURFUL_TITLE}

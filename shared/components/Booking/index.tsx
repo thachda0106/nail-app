@@ -3,6 +3,7 @@ import React from "react";
 import BookingImage from "@assets/images/booking-1.jpg";
 import Image from "next/image";
 import FormBooking from "../FormBooking";
+import { BOOKING_ID_HREF } from "@/shared/constants/common";
 
 const Booking = () => {
   return (
@@ -11,6 +12,7 @@ const Booking = () => {
       className={
         "relative w-full after:bg-smoke-primary after:absolute after:w-full after:left-0 after:top-0 after:h-full after:max-w-[1080px] my-20 after:-z-10"
       }
+      id={BOOKING_ID_HREF}
     >
       <Stack className={"flex-row-reverse w-full justify-center"}>
         <Stack

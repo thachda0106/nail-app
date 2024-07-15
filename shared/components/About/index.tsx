@@ -3,7 +3,7 @@ import React from "react";
 import AvatarImage from "@assets/images/avatar.jpg";
 import {
   ABOUT_DESCRIPTION,
-  ABOUT_ID,
+  ABOUT_ID_HREF,
   ABOUT_ITEM_1,
   ABOUT_ITEM_2,
   ABOUT_LABEL,
@@ -13,7 +13,7 @@ import SectionContent from "../SectionContent";
 
 const About = () => {
   return (
-    <Box component={"section"} className="w-full py-25" id={ABOUT_ID}>
+    <Box component={"section"} className="w-full py-25" id={ABOUT_ID_HREF}>
       <SectionContent
         imageSrc={AvatarImage}
         title={ABOUT_TITLE}

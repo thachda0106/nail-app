@@ -78,7 +78,8 @@ const Header = () => {
                         group-last:border group-last:border-solid group-last:hover:border-solid 
                         group-last:leading-[40px] group-last:hover:bg-transparent 
                         group-last:hover:text-black-thin group-last:hover:border  
-                        transition-all duration-300 ease-in-out delay-75 
+                        transition-all duration-300 ease-in-out delay-75
+                        group-last:cursor-pointer
                         ${
                           isLastMenu ? "" : "menu-underline hover:menu-active"
                         }`}

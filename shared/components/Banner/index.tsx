@@ -3,10 +3,11 @@ import Image from "next/image";
 import React from "react";
 import BannerImage from "@assets/images/banner.png";
 import {
-  ABOUT_ID,
   BANNER_BUTTON,
   BANNER_DESCRIPTIONS,
+  BANNER_ID_HREF,
   BANNER_TITLE,
+  SKILL_NAIL_ART_ID_HREF,
 } from "@constants/common";
 import Link from "next/link";
 import clsx from "clsx";
@@ -16,6 +17,7 @@ const Banner = () => {
     <Box
       component={"section"}
       className={"bg-[#eeb4c7] w-full min-h-screen relative"}
+      id={BANNER_ID_HREF}
     >
       <Stack className={"flex-row-reverse w-full justify-center min-h-screen"}>
         <Stack className={"flex-row items-center w-full max-w-[1080px]"}>
@@ -36,7 +38,7 @@ const Banner = () => {
                 "w-[200px] h-12 text-white uppercase bg-pink-second border border-solid border-pink-second hover:border-white font-catamaran font-bold rounded-none tracking-[2px]"
               }
             >
-              <Link href={`#${ABOUT_ID}`}>{BANNER_BUTTON}</Link>
+              <Link href={`#${SKILL_NAIL_ART_ID_HREF}`}>{BANNER_BUTTON}</Link>
             </Button>
           </Box>
           <Box className={clsx("relative w-[50%] h-[60%]", "fade_in_right")}>

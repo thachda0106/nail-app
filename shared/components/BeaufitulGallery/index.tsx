@@ -1,4 +1,8 @@
-import { BEAUTIFUL_DESCRIPTION, BEAUTIFUL_TITLE } from "@constants/common";
+import {
+  BEAUTIFUL_DESCRIPTION,
+  BEAUTIFUL_ID_HREF,
+  BEAUTIFUL_TITLE,
+} from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
 import React, { Fragment } from "react";
 import BeautifulOption1 from "@assets/images/beautiful_1.jpg";
@@ -24,6 +28,7 @@ const BeautifulGallery = () => {
     <Box
       component={"section"}
       className={"w-full max-w-[1080px] flex flex-col items-center gap-6"}
+      id={BEAUTIFUL_ID_HREF}
     >
       <Typography
         className={
