@@ -12,19 +12,19 @@ export type BookingForm = {
 };
 
 export const BookingSchema: yup.ObjectSchema<BookingForm> = yup.object().shape({
-  first_name: yup.string().required("Required"),
-  last_name: yup.string().required("Required"),
+  first_name: yup.string().required("Please enter first name"),
+  last_name: yup.string().required("Please enter last name"),
   email: yup
     .string()
-    .email("Please enter a valid email address")
-    .required("Required"),
+    .required("Please enter email")
+    .email("Please enter a valid email address"),
   phone_number: yup
     .string()
     .required("Required")
     .matches(phoneRegExp, "Phone number is not valid"),
   services: yup.string().optional(),
   staff_name: yup.string().optional(),
-  time_booking: yup.string().required("Required"),
+  time_booking: yup.string().required("Please select date time booking"),
 });
 
 export const initialValue = {
