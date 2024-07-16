@@ -1,5 +1,10 @@
 import { TIME_WORKING } from "@constants/calendar";
-import { TIME_DESCRIPTION, TIME_LABEL, TIME_TITLE } from "@constants/common";
+import {
+  TIME_DESCRIPTION,
+  TIME_ID_HREF,
+  TIME_LABEL,
+  TIME_TITLE,
+} from "@constants/common";
 import { Box, Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
@@ -33,6 +38,7 @@ const TimeWorking = () => {
     <Box
       component={"section"}
       className={"flex items-center gap-16 w-full max-w-[1080px]"}
+      id={TIME_ID_HREF}
     >
       <Stack
         width={"50%"}

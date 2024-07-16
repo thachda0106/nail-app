@@ -1,6 +1,7 @@
 import {
-  ABOUT_ID,
+  PRICE_ID_HREF,
   SKILL_NAIL_ART_DESCRIPTION,
+  SKILL_NAIL_ART_ID_HREF,
   SKILL_NAIL_ART_OPTIONS_1,
   SKILL_NAIL_ART_OPTIONS_2,
   SKILL_NAIL_ART_OPTIONS_3,
@@ -27,6 +28,7 @@ const SkillNailArt = () => {
     <Box
       component={"section"}
       className={"w-full max-w-[1080px] flex flex-col items-center gap-6"}
+      id={SKILL_NAIL_ART_ID_HREF}
     >
       <Typography
         className={
@@ -68,7 +70,7 @@ const SkillNailArt = () => {
                 </Box>
 
                 <Link
-                  href={`#${ABOUT_ID}`}
+                  href={`#${PRICE_ID_HREF}`}
                   scroll={true}
                   className={clsx(
                     "w-fit font-lora text-2xl font-semibold text-gray-base tracking-widest",

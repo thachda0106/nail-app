@@ -1,6 +1,10 @@
 "use client";
 
-import { FEEDBACK_DESCRIPTION, FEEDBACK_TITLE } from "@constants/common";
+import {
+  FEEDBACK_DESCRIPTION,
+  FEEDBACK_ID_HREF,
+  FEEDBACK_TITLE,
+} from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import Slider from "react-slick";
@@ -34,6 +38,7 @@ const Feedback = () => {
     <Box
       component={"section"}
       className={"w-full max-w-[1080px] flex flex-col items-center gap-6"}
+      id={FEEDBACK_ID_HREF}
     >
       <Typography
         className={

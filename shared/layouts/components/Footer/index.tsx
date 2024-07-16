@@ -8,6 +8,7 @@ import XIcon from "@mui/icons-material/X";
 import { STORE_INFORMATION } from "@/shared/constants/storeInformation";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { scrollToTopPage } from "@/shared/utils/scroll";
+import { CONTACT_ID_HREF } from "@/shared/constants/common";
 
 const Footer = () => {
   const { Contacts, Location, OpeningHours, Socials } = STORE_INFORMATION;
@@ -62,6 +63,7 @@ const Footer = () => {
           <Box
             component={"li"}
             className="flex flex-col gap-3 w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-3*24px)/4)]"
+            id={CONTACT_ID_HREF}
           >
             <Typography component={"h5"} className="font-semibold text-[22px]">
               Contacts
