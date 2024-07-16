@@ -20,7 +20,7 @@ const useBooking = () => {
   const { isValid } = formState;
 
   const onSubmit = (data: BookingForm) => {
-    console.log("submit");
+    console.log("submit", data);
   };
 
   return {
