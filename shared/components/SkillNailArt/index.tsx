@@ -1,3 +1,5 @@
+"use client";
+
 import {
   PRICE_ID_HREF,
   SKILL_NAIL_ART_DESCRIPTION,
@@ -8,7 +10,7 @@ import {
   SKILL_NAIL_ART_TITLE,
 } from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
-import React, { Fragment } from "react";
+import React, { Fragment, useRef } from "react";
 import BeautifulOption1 from "@assets/images/beautiful_1.jpg";
 import BeautifulOption2 from "@assets/images/beautiful_2.jpg";
 import BeautifulOption3 from "@assets/images/beautiful_3.jpg";
@@ -16,6 +18,7 @@ import Image from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
 import styles from "./index.module.css";
+import { useViewPort } from "@/shared/hooks/useViewPort";
 
 const BeautifulList = [
   { image: BeautifulOption1, label: SKILL_NAIL_ART_OPTIONS_1 },
@@ -24,6 +27,14 @@ const BeautifulList = [
 ];
 
 const SkillNailArt = () => {
+  const skillNailRef = useRef<HTMLDivElement>(null);
+
+  const handleInViewPort = () => {
+    skillNailRef.current?.classList?.add(styles.fadeInUp);
+  };
+
+  const { isVisiable } = useViewPort(skillNailRef, handleInViewPort);
+
   return (
     <Box
       component={"section"}
@@ -46,6 +57,7 @@ const SkillNailArt = () => {
       </Typography>
       <Stack
         className={"flex flex-row justify-between items-center w-full mb-20"}
+        ref={skillNailRef}
       >
         {BeautifulList.map((item) => {
           return (

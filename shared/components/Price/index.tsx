@@ -1,13 +1,16 @@
+"use client";
+
 import {
   PRICE_DESCRIPTION,
   PRICE_ID_HREF,
   PRICE_TITLE,
 } from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 import Gel from "@assets/images/gel.png";
 import Image from "next/image";
 import { PRICE } from "@/shared/constants/price";
+import { useViewPort } from "@/shared/hooks/useViewPort";
 
 type RowPriceProps = {
   label: string;
@@ -75,6 +78,14 @@ const ColumnPrice: React.FC<ColumnPriceProps> = ({ data }) => {
 };
 
 const Price = () => {
+  const priceRef = useRef<HTMLElement>(null);
+
+  const handleInViewport = () => {
+    priceRef.current?.classList.add("animation_start");
+  };
+
+  useViewPort(priceRef, handleInViewport);
+
   return (
     <Box
       component={"section"}
@@ -82,12 +93,18 @@ const Price = () => {
         "flex flex-col items-center gap-20 w-full max-w-[1080px] my-20"
       }
       id={PRICE_ID_HREF}
+      ref={priceRef}
     >
       <Stack direction={"row"} gap={8} width={"100%"} alignItems={"center"}>
-        <Box width={"50%"} height={200} position={"relative"}>
+        <Box
+          width={"50%"}
+          height={200}
+          position={"relative"}
+          className="fade_in_left"
+        >
           <Image src={Gel} alt="gel" fill />
         </Box>
-        <Box className={"w-[50%] flex flex-col gap-4"}>
+        <Box className={"w-[50%] flex flex-col gap-4 fade_in_right"}>
           <Typography
             className={
               "text-sm font font-semibold text-gray-primary mb-3 uppercase tracking-[2px]"
@@ -104,10 +121,10 @@ const Price = () => {
         </Box>
       </Stack>
       <Stack direction={"row"} width={"100%"} gap={8}>
-        <Box width={"50%"}>
+        <Box width={"50%"} className={"fade_in_up"}>
           <ColumnPrice data={PRICE[0]} />
         </Box>
-        <Box width={"50%"}>
+        <Box width={"50%"} className={"fade_in_up"}>
           <ColumnPrice data={PRICE[1]} />
         </Box>
       </Stack>

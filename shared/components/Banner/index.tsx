@@ -1,6 +1,8 @@
+"use client";
+
 import { Box, Button, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import BannerImage from "@assets/images/banner.png";
 import {
   BANNER_BUTTON,
@@ -11,13 +13,23 @@ import {
 } from "@constants/common";
 import Link from "next/link";
 import clsx from "clsx";
+import { useViewPort } from "@/shared/hooks/useViewPort";
 
 const Banner = () => {
+  const bannerRef = useRef<HTMLElement>(null);
+
+  const handleInViewport = () => {
+    bannerRef.current?.classList.add("animation_start");
+  };
+
+  useViewPort(bannerRef, handleInViewport);
+
   return (
     <Box
       component={"section"}
       className={"bg-[#eeb4c7] w-full min-h-screen relative"}
       id={BANNER_ID_HREF}
+      ref={bannerRef}
     >
       <Stack className={"flex-row-reverse w-full justify-center min-h-screen"}>
         <Stack className={"flex-row items-center w-full max-w-[1080px]"}>

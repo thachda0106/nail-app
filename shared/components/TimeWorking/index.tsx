@@ -1,3 +1,6 @@
+"use client";
+
+import { useViewPort } from "@/shared/hooks/useViewPort";
 import { TIME_WORKING } from "@constants/calendar";
 import {
   TIME_DESCRIPTION,
@@ -6,7 +9,7 @@ import {
   TIME_TITLE,
 } from "@constants/common";
 import { Box, Divider, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 
 type RowProps = {
   label: string;
@@ -34,22 +37,32 @@ const Row: React.FC<RowProps> = ({ label, value }) => {
 };
 
 const TimeWorking = () => {
+  const timeWorkingRef = useRef<HTMLElement>(null);
+
+  const handleInViewport = () => {
+    timeWorkingRef.current?.classList.add("animation_start");
+  };
+
+  useViewPort(timeWorkingRef, handleInViewport);
+
   return (
     <Box
       component={"section"}
       className={"flex items-center gap-16 w-full max-w-[1080px]"}
       id={TIME_ID_HREF}
+      ref={timeWorkingRef}
     >
       <Stack
         width={"50%"}
         divider={<Divider sx={{ borderStyle: "dashed" }} />}
         spacing={2}
+        className="fade_in_left"
       >
         {TIME_WORKING.map((item) => (
           <Row label={item.label} value={item.value} key={item.label} />
         ))}
       </Stack>
-      <Box className={"w-[50%] flex flex-col gap-4"}>
+      <Box className={"w-[50%] flex flex-col gap-4 fade_in_right"}>
         <Typography
           className={
             "text-sm font-catamaran font-bold text-gray-primary mb-3 uppercase tracking-[2px]"
