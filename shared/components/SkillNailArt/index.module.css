@@ -22,6 +22,30 @@
   transition: 0.3s all ease-in;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0.2;
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp .item {
+  animation: fadeInUp 0.8s linear;
+}
+
+.fadeInUp .item:first-child {
+  animation: fadeInUp 0.4s linear;
+}
+
+.fadeInUp .item:last-child {
+  animation: fadeInUp 1.2s linear;
+}
+
 .item:hover .animationImage {
   transform: scale(1.1);
   opacity: 0.8;

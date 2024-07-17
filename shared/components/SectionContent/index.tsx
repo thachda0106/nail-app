@@ -30,7 +30,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
           ["flex-row"]: !isReverse,
         })}
       >
-        <Box className={"relative w-[45%] h-[600px]"}>
+        <Box className={"relative w-[45%] h-[600px] fade_in_left"}>
           <Image
             src={imageSrc}
             fill
@@ -38,7 +38,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
             className={"object-contain"}
           />
         </Box>
-        <Box className={"flex flex-1 flex-col gap-4"}>
+        <Box className={"flex flex-1 flex-col gap-4 fade_in_right"}>
           {!!label && (
             <Typography
               className={
