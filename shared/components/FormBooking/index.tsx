@@ -31,12 +31,12 @@ const FormBooking = () => {
         width={"100%"}
         spacing={2}
         onSubmit={handleSubmit(onSubmit)}
+        className="mb-5 md:mb-5"
       >
         <Stack
-          direction={"row"}
           alignItems={"flex-start"}
-          spacing={2}
           width={"100%"}
+          className="md:flex-row gap-4"
         >
           <Controller
             name="first_name"
@@ -48,7 +48,7 @@ const FormBooking = () => {
                 onChange={onChange}
                 error={!!error?.message}
                 sx={{
-                  width: "50%",
+                  width: "100%",
                   ".MuiInputBase-root": {
                     background: "white",
                   },
@@ -71,7 +71,7 @@ const FormBooking = () => {
                 onChange={onChange}
                 error={!!error?.message}
                 sx={{
-                  width: "50%",
+                  width: "100%",
                   ".MuiInputBase-root": {
                     background: "white",
                   },
@@ -86,10 +86,9 @@ const FormBooking = () => {
           />
         </Stack>
         <Stack
-          direction={"row"}
           alignItems={"flex-start"}
-          spacing={2}
           width={"100%"}
+          className="md:flex-row gap-4"
         >
           <Controller
             name="email"
@@ -101,7 +100,7 @@ const FormBooking = () => {
                 onChange={onChange}
                 error={!!error?.message}
                 sx={{
-                  width: "50%",
+                  width: "100%",
                   ".MuiInputBase-root": {
                     background: "white",
                   },
@@ -124,7 +123,7 @@ const FormBooking = () => {
                 onChange={onChange}
                 error={!!error?.message}
                 sx={{
-                  width: "50%",
+                  width: "100%",
                   ".MuiInputBase-root": {
                     background: "white",
                   },
@@ -139,10 +138,9 @@ const FormBooking = () => {
           />
         </Stack>
         <Stack
-          direction={"row"}
           alignItems={"flex-start"}
-          spacing={2}
           width={"100%"}
+          className="md:flex-row gap-4"
         >
           <Controller
             name="services"
@@ -154,7 +152,7 @@ const FormBooking = () => {
                 onChange={onChange}
                 error={!!error?.message}
                 sx={{
-                  width: "50%",
+                  width: "100%",
                   ".MuiInputBase-input": {
                     background: "white",
                   },
@@ -192,7 +190,7 @@ const FormBooking = () => {
                 onChange={onChange}
                 error={!!error?.message}
                 sx={{
-                  width: "50%",
+                  width: "100%",
                   ".MuiInputBase-input": {
                     background: "white",
                   },
@@ -221,12 +219,7 @@ const FormBooking = () => {
             )}
           />
         </Stack>
-        <Stack
-          direction={"row"}
-          alignItems={"center"}
-          spacing={2}
-          width={"100%"}
-        >
+        <Stack direction={"row"} alignItems={"center"} width={"100%"}>
           <Controller
             name="time_booking"
             control={control}

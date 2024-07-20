@@ -26,7 +26,7 @@ const About = () => {
   return (
     <Box
       component={"section"}
-      className="w-full py-25"
+      className="w-full py-25 px-5 md:px-0 my-10 md:my-0 mx-auto"
       id={ABOUT_ID_HREF}
       ref={aboutRef}
     >
