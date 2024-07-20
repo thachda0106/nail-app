@@ -2,21 +2,26 @@ import * as yup from "yup";
 import { phoneRegExp } from "../constants/regex";
 import { IBookingForm } from "../types/bookingInfo";
 
-export const BookingSchema: yup.ObjectSchema<IBookingForm> = yup.object().shape({
-  first_name: yup.string().required("Please enter first name"),
-  last_name: yup.string().required("Please enter last name"),
-  email: yup
-    .string()
-    .required("Please enter email")
-    .email("Please enter a valid email address"),
-  phone_number: yup
-    .string()
-    .required("Required")
-    .matches(phoneRegExp, "Phone number is not valid"),
-  services: yup.string().optional(),
-  staff_name: yup.string().optional(),
-  time_booking: yup.string().required("Please select date time booking"),
-});
+export const BookingSchema: yup.ObjectSchema<IBookingForm> = yup
+  .object()
+  .shape({
+    first_name: yup.string().required("Please enter first name"),
+    last_name: yup.string().required("Please enter last name"),
+    email: yup
+      .string()
+      .required("Please enter email")
+      .email("Please enter a valid email address"),
+    phone_number: yup
+      .string()
+      .required("Required")
+      .matches(phoneRegExp, "Phone number is not valid"),
+    services: yup.string().optional(),
+    staff_name: yup.string().optional(),
+    time_booking: yup
+      .string()
+      .nullable()
+      .required("Please select date time booking"),
+  });
 
 export const initialValue = {
   first_name: "",
@@ -25,5 +30,5 @@ export const initialValue = {
   phone_number: "",
   services: "",
   staff_name: "",
-  time_booking: "",
+  time_booking: null,
 };

@@ -11,10 +11,9 @@ import {
   MESSAGE_BOOKING_FAILED,
   MESSAGE_BOOKING_SUCCESSFULLY,
 } from "../constants/booking";
-import { useEffect } from "react";
 
 const useBooking = () => {
-  const { control, handleSubmit, formState } = useForm({
+  const { control, handleSubmit, formState, reset } = useForm({
     mode: "onChange",
     reValidateMode: "onChange",
     defaultValues: initialValue,
@@ -28,6 +27,7 @@ const useBooking = () => {
       await Fetcher.post(ENDPOINTS.Api.Booking, JSON.stringify(data));
 
       toast.success(MESSAGE_BOOKING_SUCCESSFULLY);
+      reset();
     } catch (error: any) {
       toast.error(error?.response?.message || MESSAGE_BOOKING_FAILED);
     }

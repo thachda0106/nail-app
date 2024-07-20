@@ -234,7 +234,7 @@ const FormBooking = () => {
                     margin: "5px 0 0",
                   },
                 }}
-                value={null}
+                value={value}
                 onChange={onChange}
                 slotProps={{
                   textField: {
@@ -242,6 +242,7 @@ const FormBooking = () => {
                     error: !!error,
                     helperText: error?.message,
                     placeholder: PLACE_HOLDER_BOOKING.TIME_BOOKING,
+                    value
                   },
                 }}
                 disablePast

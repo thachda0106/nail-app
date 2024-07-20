@@ -1,5 +1,5 @@
 export interface IBookingForm {
-  time_booking: string;
+  time_booking: string | null;
   staff_name?: string;
   services?: string;
   phone_number: string;

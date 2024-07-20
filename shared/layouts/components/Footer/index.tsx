@@ -23,7 +23,7 @@ const Footer = () => {
       >
         <Fab
           aria-label="add"
-          className="bg-gray-icon animate-bounce"
+          className="bg-gray-icon animate-bounce z-50"
           onClick={scrollToTopPage}
         >
           <KeyboardArrowUpIcon className="text-white font-bold" />

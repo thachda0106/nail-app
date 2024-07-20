@@ -14,7 +14,7 @@ const Booking = () => {
     <Box
       component={"section"}
       className={
-        "relative w-full md:after:bg-smoke-primary after:absolute after:w-full after:left-0 after:top-0 after:h-full after:md:max-w-[75%] my-20 after:-z-10 px-5 xl:px-0"
+        "relative w-full md:after:bg-smoke-primary after:absolute after:w-full after:left-0 after:top-0 after:h-full after:md:max-w-[75%] mb-10 md:mb-20  mt-20 after:-z-10 px-5 xl:px-0"
       }
       id={BOOKING_ID_HREF}
     >
