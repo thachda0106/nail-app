@@ -3,24 +3,28 @@ import React from "react";
 import BookingImage from "@assets/images/booking-1.jpg";
 import Image from "next/image";
 import FormBooking from "../FormBooking";
-import { BOOKING_ID_HREF } from "@/shared/constants/common";
+import {
+  BOOKING_DESCRIPTION,
+  BOOKING_ID_HREF,
+  BOOKING_TITLE,
+} from "@/shared/constants/common";
 
 const Booking = () => {
   return (
     <Box
       component={"section"}
       className={
-        "relative w-full after:bg-smoke-primary after:absolute after:w-full after:left-0 after:top-0 after:h-full after:max-w-[1080px] my-20 after:-z-10"
+        "relative w-full after:bg-smoke-primary after:absolute after:w-full after:left-0 after:top-0 after:h-full after:max-w-[1080px] my-20 after:-z-10 px-5 md:px-0"
       }
       id={BOOKING_ID_HREF}
     >
       <Stack className={"flex-row-reverse w-full justify-center"}>
         <Stack
           className={
-            "flex-row-reverse items-center w-full max-w-[1080px] gap-16"
+            "md:flex-row-reverse items-center w-full max-w-[1080px] gap-8 md:gap-16"
           }
         >
-          <Box className={"relative w-[45%] h-[600px]"}>
+          <Box className={"relative w-full md:w-[45%] h-[300px] md:h-[600px]"}>
             <Image
               src={BookingImage}
               fill
@@ -28,21 +32,21 @@ const Booking = () => {
               className={"object-contain"}
             />
           </Box>
-          <Box className={"flex flex-1 flex-col gap-4"}>
+          <Box className={"flex flex-1 flex-col gap-2 md:gap-4 w-full"}>
             <Typography
               className={
                 "text-sm font-bold text-gray-primary mb-3 uppercase tracking-[2px]"
               }
             >
-              {"BOOKING NOW"}
+              {BOOKING_TITLE}
             </Typography>
             <Typography
               variant="h3"
               className={
-                "text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
+                "text-2xl md:text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
               }
             >
-              {"Make An Appointment"}
+              {BOOKING_DESCRIPTION}
             </Typography>
             <FormBooking />
           </Box>

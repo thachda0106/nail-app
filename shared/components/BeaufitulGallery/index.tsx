@@ -27,7 +27,9 @@ const BeautifulGallery = () => {
   return (
     <Box
       component={"section"}
-      className={"w-full max-w-[1080px] flex flex-col items-center gap-6"}
+      className={
+        "w-full max-w-[1080px] flex flex-col items-center gap-3 md:gap-6 px-5 md:px-0"
+      }
       id={BEAUTIFUL_ID_HREF}
     >
       <Typography
@@ -39,7 +41,7 @@ const BeautifulGallery = () => {
       </Typography>
       <Typography
         className={
-          "font-semibold text-[50px] tracking-[2px] text-gray-base font-lora mb-6"
+          "font-semibold text-3xl md:text-[50px] tracking-[2px] text-gray-base font-lora mb-6 text-center"
         }
       >
         {BEAUTIFUL_DESCRIPTION}
@@ -47,7 +49,7 @@ const BeautifulGallery = () => {
 
       <Stack
         className={
-          "flex flex-row justify-between items-center w-full flex-wrap mt-10"
+          "flex-col md:flex-row justify-between items-center w-full flex-wrap mt-5 md:mt-10 gap-5 md:gap-0"
         }
       >
         {BeautifulList.map((item, index) => {
@@ -55,13 +57,13 @@ const BeautifulGallery = () => {
             <Fragment key={index}>
               <Box
                 className={clsx(
-                  "w-[25%] flex flex-col gap-7 items-center p-2",
+                  "w-full md:w-[25%] flex flex-col items-center p-0 md:p-2",
                   styles.item
                 )}
               >
                 <Box
                   className={
-                    "w-full h-[200px] relative overflow-hidden cursor-pointer"
+                    "w-full h-[300px] md:h-[200px] relative overflow-hidden cursor-pointer"
                   }
                 >
                   <Image

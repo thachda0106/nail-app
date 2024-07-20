@@ -33,30 +33,34 @@ const SkillNailArt = () => {
     skillNailRef.current?.classList?.add(styles.fadeInUp);
   };
 
-  const { isVisiable } = useViewPort(skillNailRef, handleInViewPort);
+  useViewPort(skillNailRef, handleInViewPort);
 
   return (
     <Box
       component={"section"}
-      className={"w-full max-w-[1080px] flex flex-col items-center gap-6"}
+      className={
+        "w-full max-w-[1080px] flex flex-col items-center gap-3 md:gap-6 px-5 md:px-0"
+      }
       id={SKILL_NAIL_ART_ID_HREF}
     >
       <Typography
         className={
-          "font-bold text-sm tracking-[1.5px] text-gray-primary font-catamaran"
+          "font-bold text-sm tracking-[1.5px] text-gray-primary font-catamaran text-center"
         }
       >
         {SKILL_NAIL_ART_TITLE}
       </Typography>
       <Typography
         className={
-          "font-semibold text-[50px] tracking-[2px] text-gray-base font-lora mb-6"
+          "font-semibold text-[50px] tracking-[2px] text-gray-base font-lora mb-6 text-center"
         }
       >
         {SKILL_NAIL_ART_DESCRIPTION}
       </Typography>
       <Stack
-        className={"flex flex-row justify-between items-center w-full mb-20"}
+        className={
+          "flex flex-col md:flex-row justify-between items-center w-full mb-20 gap-6 md:gap-0"
+        }
         ref={skillNailRef}
       >
         {BeautifulList.map((item) => {
@@ -64,7 +68,7 @@ const SkillNailArt = () => {
             <Fragment key={item.label}>
               <Box
                 className={clsx(
-                  "w-[32%] flex flex-col gap-7 items-center",
+                  "w-full md:w-[32%] flex flex-col gap-7 items-center",
                   styles.item
                 )}
               >

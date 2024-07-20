@@ -8,4 +8,13 @@ export const SETTINGS: Settings = {
   autoplay: true,
   autoplaySpeed: 3000,
   cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };

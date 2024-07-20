@@ -62,5 +62,12 @@ export const FEEDBACK_TITLE = "TESTIMONIALS";
 export const FEEDBACK_DESCRIPTION = "What People Are Saying";
 
 export const BOOKING_ID_HREF = "BOOKING_ID_HREF";
+export const BOOKING_TITLE = "BOOKING NOW";
+export const BOOKING_DESCRIPTION = "Make An Appointment";
 
 export const CONTACT_ID_HREF = "CONTACT_ID_HREF";
+
+export const BOOKING_OFFER_TITLE = "Book Your Visit Online";
+export const BOOKING_OFFER_DESCRIPTION = "SAVE UP TO";
+export const BOOKING_OFFER_SALES = "30% OFF";
+export const BOOKING_OFFER_BUTTON = "BOOKING NOW";

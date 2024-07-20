@@ -21,14 +21,16 @@ const Row: React.FC<RowProps> = ({ label, value }) => {
     <Box className={"flex items-center justify-between"}>
       <Box className={"flex items-center"}>
         <Typography
-          className={"w-40 text-lg text-black-medium tracking-widest"}
+          className={"w-28 md:w-40 text-lg text-black-medium tracking-widest"}
         >
           {label}
         </Typography>
         -
       </Box>
       <Typography
-        className={"text-lg text-black-medium font-bold tracking-widest"}
+        className={
+          "text-lg text-black-medium font-bold tracking-widest whitespace-nowrap"
+        }
       >
         {value}
       </Typography>
@@ -48,21 +50,26 @@ const TimeWorking = () => {
   return (
     <Box
       component={"section"}
-      className={"flex items-center gap-16 w-full max-w-[1080px]"}
+      className={
+        "flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16 w-full max-w-[1080px] px-5 md:px-0"
+      }
       id={TIME_ID_HREF}
       ref={timeWorkingRef}
     >
       <Stack
-        width={"50%"}
         divider={<Divider sx={{ borderStyle: "dashed" }} />}
         spacing={2}
-        className="fade_in_left"
+        className="w-full md:w-[50%] fade_in_left"
       >
         {TIME_WORKING.map((item) => (
           <Row label={item.label} value={item.value} key={item.label} />
         ))}
       </Stack>
-      <Box className={"w-[50%] flex flex-col gap-4 fade_in_right"}>
+      <Box
+        className={
+          "w-full md:w-[50%] flex flex-col gap-2 md:gap-4 fade_in_right"
+        }
+      >
         <Typography
           className={
             "text-sm font-catamaran font-bold text-gray-primary mb-3 uppercase tracking-[2px]"
@@ -73,7 +80,7 @@ const TimeWorking = () => {
         <Typography
           variant="h3"
           className={
-            "text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
+            "text-3xl md:text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
           }
         >
           {TIME_TITLE}
