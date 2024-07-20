@@ -27,7 +27,7 @@ steps:
           --platform=managed \
           --ingress=all \
           --allow-unauthenticated \
-          --set-env-vars=[$$APP_ENV,MAIL_PASSWORD=$${APP_EMAIL_PASS}]
+          --set-env-vars=[$$APP_ENV,MAIL_PASSWORD='$${APP_EMAIL_PASS}']
     secretEnv: ['APP_ENV', 'APP_EMAIL_PASS']
 
 availableSecrets:
