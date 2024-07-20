@@ -28,7 +28,7 @@ const RevealColourful = () => {
     <Box
       component={"section"}
       className={
-        "relative w-full md:after:bg-smoke-primary after:absolute after:w-full after:right-0 after:top-0 after:h-full after:max-w-[1080px] my-20 after:-z-10 px-5 md:px-0"
+        "relative w-full md:after:bg-smoke-primary after:absolute after:w-full after:right-0 after:top-0 after:h-full after:md:max-w-[75%] my-20 after:-z-10 px-5 xl:px-0"
       }
       id={REVEAL_COLOURFUL_ID_HREF}
       ref={revealColourfulRef}

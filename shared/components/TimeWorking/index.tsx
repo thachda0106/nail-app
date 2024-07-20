@@ -21,7 +21,7 @@ const Row: React.FC<RowProps> = ({ label, value }) => {
     <Box className={"flex items-center justify-between"}>
       <Box className={"flex items-center"}>
         <Typography
-          className={"w-28 md:w-40 text-lg text-black-medium tracking-widest"}
+          className={"w-28 xl:w-40 text-lg text-black-medium tracking-widest"}
         >
           {label}
         </Typography>
@@ -51,7 +51,7 @@ const TimeWorking = () => {
     <Box
       component={"section"}
       className={
-        "flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16 w-full max-w-[1080px] px-5 md:px-0"
+        "flex flex-col-reverse lg:flex-row items-center gap-8 xl:gap-16 w-full max-w-[1080px] px-5 xl:px-0"
       }
       id={TIME_ID_HREF}
       ref={timeWorkingRef}
@@ -59,7 +59,7 @@ const TimeWorking = () => {
       <Stack
         divider={<Divider sx={{ borderStyle: "dashed" }} />}
         spacing={2}
-        className="w-full md:w-[50%] fade_in_left"
+        className="w-full lg:w-[50%] fade_in_left"
       >
         {TIME_WORKING.map((item) => (
           <Row label={item.label} value={item.value} key={item.label} />
@@ -67,7 +67,7 @@ const TimeWorking = () => {
       </Stack>
       <Box
         className={
-          "w-full md:w-[50%] flex flex-col gap-2 md:gap-4 fade_in_right"
+          "w-full lg:w-[50%] flex flex-col gap-2 lg:gap-4 fade_in_right"
         }
       >
         <Typography
@@ -80,7 +80,7 @@ const TimeWorking = () => {
         <Typography
           variant="h3"
           className={
-            "text-3xl md:text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
+            "text-3xl lg:text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
           }
         >
           {TIME_TITLE}

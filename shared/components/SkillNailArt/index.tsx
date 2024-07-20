@@ -39,7 +39,7 @@ const SkillNailArt = () => {
     <Box
       component={"section"}
       className={
-        "w-full max-w-[1080px] flex flex-col items-center gap-3 md:gap-6 px-5 md:px-0"
+        "w-full max-w-[1080px] flex flex-col items-center gap-3 lg:gap-6 px-5 xl:px-0"
       }
       id={SKILL_NAIL_ART_ID_HREF}
     >
@@ -59,7 +59,7 @@ const SkillNailArt = () => {
       </Typography>
       <Stack
         className={
-          "flex flex-col md:flex-row justify-between items-center w-full mb-20 gap-6 md:gap-0"
+          "flex flex-col md:flex-row justify-between items-start w-full mb-20 gap-6 xl:gap-0"
         }
         ref={skillNailRef}
       >
@@ -89,7 +89,7 @@ const SkillNailArt = () => {
                   href={`#${PRICE_ID_HREF}`}
                   scroll={true}
                   className={clsx(
-                    "w-fit font-lora text-2xl font-semibold text-gray-base tracking-widest",
+                    "w-fit font-lora text-2xl font-semibold text-gray-base tracking-widest text-center",
                     styles["animationText"]
                   )}
                 >

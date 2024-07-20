@@ -52,13 +52,13 @@ type ColumnPriceProps = {
 const ColumnPrice: React.FC<ColumnPriceProps> = ({ data }) => {
   const { type, description, services } = data;
   return (
-    <Stack className="gap-3 md:gap-7">
+    <Stack className="gap-3 xl:gap-7">
       <Typography className={"font-bold text-sm text-gray-primary"}>
         {type}
       </Typography>
       <Typography
         className={
-          "font-semibold font-lora text-[28px] text-gray-base tracking-[2px] mb-1 md:mb-3"
+          "font-semibold font-lora text-[28px] text-gray-base tracking-[2px] mb-1 lg:mb-3"
         }
       >
         {description}
@@ -90,18 +90,18 @@ const Price = () => {
     <Box
       component={"section"}
       className={
-        "flex flex-col items-center gap-20 w-full max-w-[1080px] my-20 px-5 md:px-0"
+        "flex flex-col items-center gap-20 w-full max-w-[1080px] my-20 px-5 xl:px-0"
       }
       id={PRICE_ID_HREF}
       ref={priceRef}
     >
-      <Stack className="flex-col-reverse md:flex-row items-center gap-8 md:gap-16 w-full">
-        <Box className="w-full md:w-[50%] h-[200px] relative fade_in_left">
+      <Stack className="flex-col-reverse lg:flex-row items-center gap-8 xl:gap-16 w-full">
+        <Box className="w-full lg:w-[50%] h-[200px] relative fade_in_left">
           <Image src={Gel} alt="gel" fill />
         </Box>
         <Box
           className={
-            "w-full md:w-[50%] flex flex-col gap-2 md:gap-4 fade_in_right items-center"
+            "w-full lg:w-[50%] flex flex-col gap-2 lg:gap-4 fade_in_right items-center"
           }
         >
           <Typography
@@ -114,18 +114,18 @@ const Price = () => {
           <Typography
             variant="h3"
             className={
-              "text-3xl md:text-4xl font-lora font-semibold text-gray-base text-center md:text-left"
+              "text-3xl lg:text-4xl font-lora font-semibold text-gray-base text-center xl:text-left"
             }
           >
             {PRICE_DESCRIPTION}
           </Typography>
         </Box>
       </Stack>
-      <Stack className="w-full gap-8 md:gap-16 md:flex-row">
-        <Box className={"w-full md:w-[50%] fade_in_up"}>
+      <Stack className="w-full gap-8 xl:gap-16 lg:flex-row">
+        <Box className={"w-full lg:w-[50%] fade_in_up"}>
           <ColumnPrice data={PRICE[0]} />
         </Box>
-        <Box className={"w-full md:w-[50%] fade_in_up"}>
+        <Box className={"w-full lg:w-[50%] fade_in_up"}>
           <ColumnPrice data={PRICE[1]} />
         </Box>
       </Stack>
