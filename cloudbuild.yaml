@@ -27,13 +27,15 @@ steps:
           --platform=managed \
           --ingress=all \
           --allow-unauthenticated \
-          --set-env-vars=$$APP_ENV
-    secretEnv: ['APP_ENV']
+          --set-env-vars=[$$APP_ENV,MAIL_PASSWORD=$${APP_EMAIL_PASS}]
+    secretEnv: ['APP_ENV', 'APP_EMAIL_PASS']
 
 availableSecrets:
   secretManager:
   - versionName: projects/${PROJECT_NUMBER}/secrets/${_SECRET_ENV}/versions/latest
     env: 'APP_ENV'
+  - versionName: projects/${PROJECT_NUMBER}/secrets/${_SECRET_APP_EMAIL_PASS}/versions/latest
+  env: 'APP_EMAIL_PASS'
 
 options:
   logging: CLOUD_LOGGING_ONLY
