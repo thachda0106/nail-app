@@ -10,7 +10,21 @@ export const SETTINGS: Settings = {
   cssEase: "linear",
   responsive: [
     {
-      breakpoint: 480,
+      breakpoint: 1054,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 350,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,

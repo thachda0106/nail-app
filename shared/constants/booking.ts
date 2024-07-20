@@ -26,3 +26,8 @@ export const STAFFS = [
   "Virginia Andrews",
   "Kelly Snyder",
 ];
+
+export const MESSAGE_BOOKING_SUCCESSFULLY =
+  "Booking successfully, please check your email !";
+export const MESSAGE_BOOKING_FAILED =
+  "Booking failed, please try again later !";

@@ -29,21 +29,21 @@ const BookingOffer = () => {
       >
         <Typography
           className={
-            "text-white font-lora text-center text-2xl md:text-[28px] mb-4 md:mb-8 tracking-[2px]"
+            "text-white font-lora text-center text-2xl xl:text-[28px] mb-4 xl:mb-8 tracking-[2px]"
           }
         >
           {BOOKING_OFFER_TITLE}
         </Typography>
         <Typography
           className={
-            "text-white font-lora text-center text-5xl md:text-[96px] leading-none"
+            "text-white font-lora text-center text-5xl xl:text-[96px] leading-none"
           }
         >
           {BOOKING_OFFER_DESCRIPTION}
         </Typography>
         <Typography
           className={
-            "text-white font-lora text-center text-7xl md:text-[132px] leading-none"
+            "text-white font-lora text-center text-7xl xl:text-[132px] leading-none"
           }
         >
           {BOOKING_OFFER_SALES}

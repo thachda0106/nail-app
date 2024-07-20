@@ -26,19 +26,23 @@ const SectionContent: React.FC<SectionContentProps> = ({
     <Stack className={"flex-row-reverse w-full justify-center"}>
       <Stack
         className={clsx(
-          "flex-col-reverse items-center w-full max-w-[1080px] gap-8 md:gap-16",
+          "flex-col-reverse items-center w-full max-w-[1080px] gap-8 xl:gap-16",
           {
-            ["!flex-col md:flex-row-reverse"]: !!isReverse,
-            ["md:flex-row"]: !isReverse,
+            ["!flex-col md:!flex-row-reverse"]: !!isReverse,
+            ["!flex-col-reverse md:!flex-row"]: !isReverse,
           }
         )}
       >
         <Box
           className={
-            "relative w-full md:w-[45%] h-[300px] md:h-[600px] fade_in_left"
+            "relative w-full md:w-[45%] md:h-[600px] fade_in_left flex items-center"
           }
         >
-          <Image src={imageSrc} fill alt={"image"} className={"object-cover"} />
+          <Image
+            src={imageSrc}
+            alt={"image"}
+            className={"object-contain h-auto"}
+          />
         </Box>
         <Box className={"flex flex-1 flex-col gap-2 fade_in_right"}>
           {!!label && (
@@ -54,7 +58,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
             <Typography
               variant="h3"
               className={
-                "text-3xl md:text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
+                "text-3xl xl:text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
               }
             >
               {title}
@@ -89,7 +93,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
                 <ListItem
                   className={clsx(
                     "text-lg text-gray-medium font-catamaran p-0",
-                    { "mb-2 md:mb-4": index !== listItem.length - 1 }
+                    { "mb-2 xl:mb-4": index !== listItem.length - 1 }
                   )}
                   key={index}
                 >

@@ -14,14 +14,14 @@ const Booking = () => {
     <Box
       component={"section"}
       className={
-        "relative w-full after:bg-smoke-primary after:absolute after:w-full after:left-0 after:top-0 after:h-full after:max-w-[1080px] my-20 after:-z-10 px-5 md:px-0"
+        "relative w-full md:after:bg-smoke-primary after:absolute after:w-full after:left-0 after:top-0 after:h-full after:md:max-w-[75%] my-20 after:-z-10 px-5 xl:px-0"
       }
       id={BOOKING_ID_HREF}
     >
       <Stack className={"flex-row-reverse w-full justify-center"}>
         <Stack
           className={
-            "md:flex-row-reverse items-center w-full max-w-[1080px] gap-8 md:gap-16"
+            "md:flex-row-reverse items-center w-full max-w-[1080px] gap-8 xl:gap-16"
           }
         >
           <Box className={"relative w-full md:w-[45%] h-[300px] md:h-[600px]"}>
@@ -29,10 +29,10 @@ const Booking = () => {
               src={BookingImage}
               fill
               alt={"image"}
-              className={"object-contain"}
+              className={"object-cover md:object-contain"}
             />
           </Box>
-          <Box className={"flex flex-1 flex-col gap-2 md:gap-4 w-full"}>
+          <Box className={"flex flex-1 flex-col gap-2 xl:gap-4 w-full"}>
             <Typography
               className={
                 "text-sm font-bold text-gray-primary mb-3 uppercase tracking-[2px]"
@@ -43,7 +43,7 @@ const Booking = () => {
             <Typography
               variant="h3"
               className={
-                "text-2xl md:text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
+                "text-2xl xl:text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
               }
             >
               {BOOKING_DESCRIPTION}
