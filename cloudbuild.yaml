@@ -1,0 +1,39 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      -  'asia-east1-docker.pkg.dev/${PROJECT_ID}/asia-east1/${REPO_NAME}:${SHORT_SHA}'
+      - '--build-arg'
+      - 'APP_ENV=${_APP_ENV}'
+      - '.'
+
+  # Push the container image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      -  'asia-east1-docker.pkg.dev/${PROJECT_ID}/asia-east1/${REPO_NAME}:${SHORT_SHA}'
+
+  # Deploy container image to Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+   entrypoint: bash
+    args:
+      - '-c'
+      - |
+        gcloud run deploy ${REPO_NAME} \
+          --image=asia-east1-docker.pkg.dev/${PROJECT_ID}/asia-east1/${REPO_NAME}:${SHORT_SHA} \
+          --region=asia-east1 \
+          --platform=managed \
+          --ingress=all \
+          --allow-unauthenticated \
+          --set-env-vars=$$APP_ENV
+    secretEnv: ['APP_ENV']
+
+availableSecrets:
+  secretManager:
+  - versionName: projects/${PROJECT_NUMBER}/secrets/${_SECRET_ENV}/versions/latest
+    env: 'APP_ENV'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
