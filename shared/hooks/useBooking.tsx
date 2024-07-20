@@ -1,33 +1,41 @@
 "use client";
 
-import React from "react";
 import { Resolver, useForm } from "react-hook-form";
 import {
-  BookingForm,
   BookingSchema,
   initialValue,
 } from "@/shared/schema/booking.schema";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { IBookingForm } from "../types/bookingInfo";
+import { ENDPOINTS } from "../constants/endpoints";
+import { Fetcher } from "../helpers/fetch";
 
 const useBooking = () => {
   const { control, handleSubmit, formState } = useForm({
     mode: "onChange",
     reValidateMode: "onChange",
     defaultValues: initialValue,
-    resolver: yupResolver(BookingSchema) as Resolver<BookingForm>,
+    resolver: yupResolver(BookingSchema) as Resolver<IBookingForm>,
   });
 
-  const { isValid } = formState;
+  const { isValid, isSubmitting } = formState;
 
-  const onSubmit = (data: BookingForm) => {
-    console.log("submit", data);
-  };
+  const onSubmit = async  (data: IBookingForm) => {
+    try {
+      const res = await Fetcher.post(ENDPOINTS.Api.Booking, JSON.stringify(data))
+
+      alert('post success')
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return {
     control,
     isValid,
     onSubmit,
     handleSubmit,
+    isSubmitting,
   };
 };
 

@@ -1,20 +1,31 @@
-import { HTTP_STATUS_CODES } from "@/shared/constants/httpStatus";
+import { BookingSchema } from "@shared/schema/booking.schema";
 import { defineBookingMailHTML } from "@/shared/utils/mailTemplates";
 import { ApiResponser } from "@/shared/helpers/apiResponse";
 import { MailSender } from "@/shared/helpers/mailSender";
 import { NextRequest } from "next/server";
+import { IBookingForm } from "@/shared/types/bookingInfo";
+import { HTTP_STATUS_CODES } from "@/shared/constants/https";
 
 export async function POST(request: NextRequest) {
   try {
-    // TODO for validate user information
+    const bookingInfo = await request.json();
+    const isValidData = await BookingSchema.validateSync(bookingInfo);
+
+    if (!isValidData) {
+      return ApiResponser.badRequest({
+        statusCode: HTTP_STATUS_CODES.BadRequest,
+        message: "Invalid booking data.",
+      });
+    }
+
     const mailSender = new MailSender();
 
     const info = await mailSender.sendMail({
-      from: "<thachbovjp@gmail.com>",
-      to: "thachda010600@gmail.com",
+      from: `<${bookingInfo.email}>`,
+      to: `${process.env.MAIL_USERNAME}`,
       subject: "BOOKING TIME",
       text: "I want to book an appointment for a manicure.",
-      html: defineBookingMailHTML({ username: 'Thach Stone', phoneNumber: '0906303704', bookingTime: '04:00 PM 07/01/2024'}),
+      html: defineBookingMailHTML((bookingInfo as unknown) as IBookingForm),
     });
 
     return ApiResponser.ok({

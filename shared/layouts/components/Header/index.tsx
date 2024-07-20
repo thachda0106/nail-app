@@ -19,15 +19,15 @@ import LogoWhite from "@/public/assets/images/logo-white.png";
 import LogoBlack from "@/public/assets/images/logo-black.png";
 import clsx from "clsx";
 
+const SCROLL_THRESHOLD = 70;
+
 const Header = () => {
   const { scrollY } = useWindowScrollPositions();
   const [isOpenMenu, setOpenMenu] = useState(false);
   const isMobile = useMobileScreen(BREAK_POINTS.Medium, false);
   const router = useRouter();
   const CurrentMenuIcon = isOpenMenu ? MenuOpenIcon : MenuIcon;
-
-  const toggleClassNames = scrollY >= 50;
-
+  const toggleClassNames = scrollY >= SCROLL_THRESHOLD;
   const logoPath = toggleClassNames ? LogoBlack : LogoWhite;
 
   return (

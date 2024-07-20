@@ -11,3 +11,12 @@ export const HTTP_STATUS_CODES = {
   TooManyRequests: 429,
   InternalServerError: 500,
 };
+
+
+export const METHODS = {
+  Post: 'POST',
+  Get: 'GET',
+  Delete: 'DELETE',
+  Put: 'PUT',
+  Patch: 'PATCH',
+};

@@ -4,7 +4,7 @@ export interface IApiError {
 }
 
 export interface IApiResponse<T> {
-  statusCode: number;
+  statusCode?: number;
   success?: boolean;
   message?: string;
   data?: T;

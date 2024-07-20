@@ -1,17 +1,8 @@
 import * as yup from "yup";
 import { phoneRegExp } from "../constants/regex";
+import { IBookingForm } from "../types/bookingInfo";
 
-export type BookingForm = {
-  first_name: string;
-  last_name: string;
-  email: string;
-  phone_number: string;
-  services?: string;
-  staff_name?: string;
-  time_booking: string;
-};
-
-export const BookingSchema: yup.ObjectSchema<BookingForm> = yup.object().shape({
+export const BookingSchema: yup.ObjectSchema<IBookingForm> = yup.object().shape({
   first_name: yup.string().required("Please enter first name"),
   last_name: yup.string().required("Please enter last name"),
   email: yup

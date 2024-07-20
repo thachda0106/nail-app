@@ -7,13 +7,13 @@ import {
 } from "@/shared/constants/booking";
 import useBooking from "@/shared/hooks/useBooking";
 import {
-  Box,
   TextField,
   Stack,
   Button,
   Select,
   MenuItem,
   Typography,
+  CircularProgress,
 } from "@mui/material";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import React from "react";
@@ -22,7 +22,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
 const FormBooking = () => {
-  const { control, handleSubmit, onSubmit, isValid } = useBooking();
+  const { control, handleSubmit, onSubmit, isValid , isSubmitting} = useBooking();
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -262,7 +262,7 @@ const FormBooking = () => {
           disabled={!isValid}
           className="hover:cursor-pointer text-sm font-semibold !bg-pink-second border-pink-second disabled:!bg-slate-50 disabled:cursor-not-allowed h-14 text-white text-center border border-soli transition-all duration-300 ease-linear delay-75 hover:opacity-70"
         >
-          Book now
+          { isSubmitting ? <CircularProgress color="inherit" size={22} /> : 'Book now'}
         </Button>
       </Stack>
     </LocalizationProvider>
