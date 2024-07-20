@@ -35,7 +35,7 @@ availableSecrets:
   - versionName: projects/${PROJECT_NUMBER}/secrets/${_SECRET_ENV}/versions/latest
     env: 'APP_ENV'
   - versionName: projects/${PROJECT_NUMBER}/secrets/${_SECRET_APP_EMAIL_PASS}/versions/latest
-  env: 'APP_EMAIL_PASS'
+    env: 'APP_EMAIL_PASS'
 
 options:
   logging: CLOUD_LOGGING_ONLY
