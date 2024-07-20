@@ -38,7 +38,7 @@ const Feedback = () => {
     <Box
       component={"section"}
       className={
-        "w-full max-w-[1080px] flex flex-col items-center gap-3 md:gap-6 px-5 md:px-0"
+        "w-full max-w-[1080px] flex flex-col items-center gap-3 xl:gap-6 px-5 xl:px-0"
       }
       id={FEEDBACK_ID_HREF}
     >
@@ -51,7 +51,7 @@ const Feedback = () => {
       </Typography>
       <Typography
         className={
-          "font-semibold text-3xl md:text-[50px] tracking-[2px] text-gray-base font-lora mb-6 text-center"
+          "font-semibold text-3xl xl:text-[50px] tracking-[2px] text-gray-base font-lora mb-6 text-center"
         }
       >
         {FEEDBACK_DESCRIPTION}

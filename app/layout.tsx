@@ -27,6 +27,8 @@ export const metadata: Metadata = {
 import "reset-css";
 import "@styles/globals.scss";
 import clsx from "clsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function RootLayout({
   children,
@@ -44,6 +46,7 @@ export default function RootLayout({
         )}
       >
         <AppTheme>
+          <ToastContainer position="top-right" autoClose={3000} />
           <MainLayout>
             <main>{children}</main>
           </MainLayout>
