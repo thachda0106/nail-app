@@ -31,17 +31,34 @@ const Banner = () => {
       id={BANNER_ID_HREF}
       ref={bannerRef}
     >
-      <Stack className={"flex-row-reverse w-full justify-center min-h-screen"}>
-        <Stack className={"flex-row items-center w-full max-w-[1080px]"}>
-          <Box className={clsx("w-[50%] flex flex-col gap-4", "fade_in_left")}>
+      <Stack
+        className={
+          "flex-row-reverse w-full justify-center md:min-h-screen px-5 md:px-0"
+        }
+      >
+        <Stack
+          className={
+            "md:flex-row items-center w-full max-w-[1080px] gap-5 md:gap-0"
+          }
+        >
+          <Box
+            className={clsx(
+              "w-full md:w-[50%] flex flex-col gap-4 items-center md:items-start mt-28 md:mt-0",
+              "fade_in_left"
+            )}
+          >
             <Typography
               variant="h2"
-              className={"text-[82px] text-white font-lora font-semibold"}
+              className={
+                "text-[40px] md:text-[82px] text-white font-lora font-semibold text-center md:text-left"
+              }
             >
               {BANNER_TITLE}
             </Typography>
             <Typography
-              className={"text-2xl text-[#fdf2f6] font-catamaran mb-[14px]"}
+              className={
+                "text-lg md:text-2xl text-[#fdf2f6] font-catamaran mb-[14px] text-center md:text-left"
+              }
             >
               {BANNER_DESCRIPTIONS}
             </Typography>
@@ -53,7 +70,12 @@ const Banner = () => {
               <Link href={`#${SKILL_NAIL_ART_ID_HREF}`}>{BANNER_BUTTON}</Link>
             </Button>
           </Box>
-          <Box className={clsx("relative w-[50%] h-[60%]", "fade_in_right")}>
+          <Box
+            className={clsx(
+              "relative w-full md:w-[50%] h-[300px] md:h-[60%]",
+              "fade_in_right"
+            )}
+          >
             <Image
               src={BannerImage}
               fill

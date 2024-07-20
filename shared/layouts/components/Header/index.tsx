@@ -35,7 +35,7 @@ const Header = () => {
       <Box
         component={"header"}
         className={clsx(
-          "fixed w-full z-[999999] transition-all duration-[450ms] ease-in-out",
+          "fixed w-full z-[1000] transition-all duration-[450ms] ease-in-out",
           {
             ["bg-white shadow-lg"]: toggleClassNames,
           }
@@ -44,9 +44,12 @@ const Header = () => {
         <Container
           sx={{ height: toggleClassNames ? 70 : 90 }}
           component={"div"}
-          className={clsx("transition-all duration-300 ease-in-out delay-75", {
-            ["py-[10px]"]: !toggleClassNames,
-          })}
+          className={clsx(
+            "transition-all duration-300 ease-in-out delay-75 px-5",
+            {
+              ["py-[10px]"]: !toggleClassNames,
+            }
+          )}
         >
           <Stack
             component={"div"}

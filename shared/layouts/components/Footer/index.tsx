@@ -29,7 +29,7 @@ const Footer = () => {
           <KeyboardArrowUpIcon className="text-white font-bold" />
         </Fab>
       </Stack>
-      <Container component={"div"}>
+      <Container component={"div"} className="px-5">
         <Stack
           component={"ul"}
           direction={"row"}

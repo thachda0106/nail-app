@@ -25,20 +25,22 @@ const SectionContent: React.FC<SectionContentProps> = ({
   return (
     <Stack className={"flex-row-reverse w-full justify-center"}>
       <Stack
-        className={clsx("items-center w-full max-w-[1080px] gap-16", {
-          ["flex-row-reverse"]: !!isReverse,
-          ["flex-row"]: !isReverse,
-        })}
+        className={clsx(
+          "flex-col-reverse items-center w-full max-w-[1080px] gap-8 md:gap-16",
+          {
+            ["!flex-col md:flex-row-reverse"]: !!isReverse,
+            ["md:flex-row"]: !isReverse,
+          }
+        )}
       >
-        <Box className={"relative w-[45%] h-[600px] fade_in_left"}>
-          <Image
-            src={imageSrc}
-            fill
-            alt={"image"}
-            className={"object-contain"}
-          />
+        <Box
+          className={
+            "relative w-full md:w-[45%] h-[300px] md:h-[600px] fade_in_left"
+          }
+        >
+          <Image src={imageSrc} fill alt={"image"} className={"object-cover"} />
         </Box>
-        <Box className={"flex flex-1 flex-col gap-4 fade_in_right"}>
+        <Box className={"flex flex-1 flex-col gap-2 fade_in_right"}>
           {!!label && (
             <Typography
               className={
@@ -52,7 +54,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
             <Typography
               variant="h3"
               className={
-                "text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
+                "text-3xl md:text-[44px] font-lora font-semibold text-gray-base mb-[6px]"
               }
             >
               {title}
@@ -87,7 +89,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
                 <ListItem
                   className={clsx(
                     "text-lg text-gray-medium font-catamaran p-0",
-                    { "mb-4": index !== listItem.length - 1 }
+                    { "mb-2 md:mb-4": index !== listItem.length - 1 }
                   )}
                   key={index}
                 >
