@@ -10,9 +10,9 @@ export const PLACE_HOLDER_BOOKING = {
   TIME_BOOKING: "Appointment Date *",
 };
 
-export const SERVICES = PRICES.map((item) =>
-  item.services.map((service) => service.label)
-).flat();
+// export const SERVICES = PRICES.map((item) =>
+//   item.services.map((service) => service.label)
+// ).flat();
 
 export const STAFFS = [
   "Oliver Hansen",

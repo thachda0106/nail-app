@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  PLACE_HOLDER_BOOKING,
-  SERVICES,
-  STAFFS,
-} from "@/shared/constants/booking";
+import { PLACE_HOLDER_BOOKING } from "@/shared/constants/booking";
 import useBooking from "@/shared/hooks/useBooking";
 import {
   TextField,
@@ -14,15 +10,42 @@ import {
   MenuItem,
   Typography,
   CircularProgress,
+  ListSubheader,
 } from "@mui/material";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import React from "react";
 import { Controller } from "react-hook-form";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { PRICES } from "@/shared/constants/services";
+
+type SelectGroupBookingProps = {
+  service: {
+    services: {
+      label: string;
+    }[];
+    type: string;
+  };
+};
+
+const SelectGroupBooking = ({ service }: SelectGroupBookingProps) => {
+  return (
+    <>
+      <ListSubheader key={service.type} sx={{ fontStyle: "italic" }}>
+        {service.type}
+      </ListSubheader>
+      {service.services.map((item, index) => (
+        <MenuItem key={`${item.label}${index}`} value={item.label}>
+          {item.label}
+        </MenuItem>
+      ))}
+    </>
+  );
+};
 
 const FormBooking = () => {
-  const { control, handleSubmit, onSubmit, isValid , isSubmitting} = useBooking();
+  const { control, handleSubmit, onSubmit, isValid, isSubmitting } =
+    useBooking();
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -172,15 +195,13 @@ const FormBooking = () => {
                 <MenuItem value={""} style={{ fontStyle: "italic" }}>
                   None
                 </MenuItem>
-                {SERVICES.map((staff) => (
-                  <MenuItem key={staff} value={staff}>
-                    {staff}
-                  </MenuItem>
+                {PRICES.map((service) => (
+                  <SelectGroupBooking service={service} key={service.type} />
                 ))}
               </Select>
             )}
           />
-          <Controller
+          {/* <Controller
             name="staff_name"
             control={control}
             render={({ field: { value, onChange }, fieldState: { error } }) => (
@@ -217,7 +238,7 @@ const FormBooking = () => {
                 ))}
               </Select>
             )}
-          />
+          /> */}
         </Stack>
         <Stack direction={"row"} alignItems={"center"} width={"100%"}>
           <Controller
@@ -242,7 +263,7 @@ const FormBooking = () => {
                     error: !!error,
                     helperText: error?.message,
                     placeholder: PLACE_HOLDER_BOOKING.TIME_BOOKING,
-                    value
+                    value,
                   },
                 }}
                 disablePast
@@ -256,7 +277,11 @@ const FormBooking = () => {
           disabled={!isValid}
           className="hover:cursor-pointer text-sm font-semibold !bg-pink-second border-pink-second disabled:!bg-slate-50 disabled:cursor-not-allowed h-14 text-white text-center border border-soli transition-all duration-300 ease-linear delay-75 hover:opacity-70"
         >
-          { isSubmitting ? <CircularProgress color="inherit" size={22} /> : 'Book now'}
+          {isSubmitting ? (
+            <CircularProgress color="inherit" size={22} />
+          ) : (
+            "Book now"
+          )}
         </Button>
       </Stack>
     </LocalizationProvider>
