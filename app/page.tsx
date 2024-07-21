@@ -9,10 +9,12 @@ import RevealColourful from "@/shared/components/RevealColourful";
 import ShiningFeminine from "@/shared/components/ShiningFeminine";
 import SkillNailArt from "@/shared/components/SkillNailArt";
 import TimeWorking from "@/shared/components/TimeWorking";
+import { IPageContext } from "@/shared/types/context";
+import { Stack } from "@mui/material";
 
-export default function Home() {
+const Home: React.FC<IPageContext> = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <Stack component={"div"} justifyItems={"center"} alignItems={"center"}>
       <Banner />
       <About />
       <SkillNailArt />
@@ -24,6 +26,8 @@ export default function Home() {
       <RevealColourful />
       <Feedback />
       <Booking />
-    </div>
+    </Stack>
   );
-}
+};
+
+export default Home;

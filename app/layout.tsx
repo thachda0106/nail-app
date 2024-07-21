@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import { Catamaran, Lora } from "next/font/google";
 import MainLayout from "@/shared/layouts/Main.layout";
 import AppTheme from "@themes/default.theme";
+import clsx from "clsx";
+import { ToastContainer } from "react-toastify";
+import { META_DATA } from "@/shared/constants/storeInformation";
+
+import "reset-css";
+import "react-toastify/dist/ReactToastify.css";
+import "@styles/globals.scss";
 
 const catamaran = Catamaran({
   weight: ["400", "600", "700", "900"],
@@ -19,16 +26,7 @@ const lora = Lora({
   variable: "--font-lora",
 });
 
-export const metadata: Metadata = {
-  title: "Nail store.",
-  description: "Nail app store.",
-};
-
-import "reset-css";
-import "@styles/globals.scss";
-import clsx from "clsx";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+export const metadata: Metadata = META_DATA;
 
 export default function RootLayout({
   children,

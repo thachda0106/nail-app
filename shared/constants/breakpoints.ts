@@ -5,3 +5,8 @@ export const BREAK_POINTS = {
   ExtraLarge: 1280,
   SuperLarge: 1440,
 };
+
+export const DEVICE_TYPES = {
+  Mobile: 'mobile',
+  Desktop: 'desktop',
+};

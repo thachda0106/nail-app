@@ -5,7 +5,10 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: ["var(--font-catamaran), sans-serif"].join(","),
+    fontFamily: [
+      "var(--font-catamaran), sans-serif",
+      "var(--font-lora), sans-serif",
+    ].join(","),
   },
 });
 

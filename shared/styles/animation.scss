@@ -10,7 +10,8 @@
 }
 
 .animation_start .fade_in_left {
-  animation: fadeInLeft 1s ease-in;
+  animation: fadeInLeft 1.5s ease-in-out ;
+  animation-delay: 0.3s;
 }
 
 @keyframes fadeInRight {

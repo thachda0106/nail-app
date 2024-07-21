@@ -1,7 +1,7 @@
 export const BANNER_ID_HREF = "BANNER_ID_HREF";
-export const BANNER_TITLE = "Nail Shine Made Simple";
+export const BANNER_TITLE = "Floral Crush Beauty";
 export const BANNER_DESCRIPTIONS =
-  "Feugiat primis and ligula laoreet auctor and mauris undo auctor a laoreet purus sapien integer";
+  "Enjoy personalized treatments and meticulous care designed to leave you feeling rejuvenated and beautiful.";
 export const BANNER_BUTTON = "FIND OUT MORE";
 
 export const ABOUT_ID_HREF = "ABOUT_ID_HREF";

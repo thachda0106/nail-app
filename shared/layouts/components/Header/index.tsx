@@ -4,14 +4,14 @@ import { BREAK_POINTS } from "@/shared/constants/breakpoints";
 import useMobileScreen from "@/shared/hooks/useMobileScreen";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import MenuIcon from "@mui/icons-material/Menu";
 import PhoneIcon from "@mui/icons-material/SettingsPhoneOutlined";
 import Link from "next/link";
 import MenuDrawer from "../MenuDrawer";
 import { MENUS } from "@constants/menus";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { STORE_INFORMATION } from "@/shared/constants/storeInformation";
 import { scrollToElementById } from "@/shared/utils/scroll";
 import { useWindowScrollPositions } from "@/shared/hooks/useWindowScrollPositions";
@@ -24,7 +24,7 @@ const SCROLL_THRESHOLD = 70;
 const Header = () => {
   const { scrollY } = useWindowScrollPositions();
   const [isOpenMenu, setOpenMenu] = useState(false);
-  const isMobile = useMobileScreen(BREAK_POINTS.Medium, false);
+  const isMobile = useMobileScreen(BREAK_POINTS.Medium);
   const router = useRouter();
   const CurrentMenuIcon = isOpenMenu ? MenuOpenIcon : MenuIcon;
   const toggleClassNames = scrollY >= SCROLL_THRESHOLD;
@@ -42,10 +42,15 @@ const Header = () => {
         )}
       >
         <Container
-          sx={{ height: toggleClassNames ? 70 : 90 }}
+          sx={{
+            height: toggleClassNames ? 70 : 90,
+            mx: isMobile ? 0 : "auto",
+            px: "20px",
+            width: isMobile ? "100dvw" : "100%",
+          }}
           component={"div"}
           className={clsx(
-            "transition-all duration-300 ease-in-out delay-75 px-5",
+            "transition-all duration-300 ease-in-out delay-75",
             {
               ["py-[10px]"]: !toggleClassNames,
             }
@@ -81,7 +86,7 @@ const Header = () => {
                 className="self-center"
                 onClick={() => setOpenMenu((preState) => !preState)}
               >
-                <CurrentMenuIcon className="text-gray-icon text-[30px] cursor-pointer " />
+                <CurrentMenuIcon className="text-gray-icon text-[30px] cursor-pointer" />
               </Box>
             ) : (
               <Stack
@@ -109,8 +114,7 @@ const Header = () => {
                           ["menu-underline hover:menu-active"]: !isLastMenu,
                           ["!text-black-thin"]: !!toggleClassNames,
                           ["bg-image-white"]: !isLastMenu && !toggleClassNames,
-                          ["group-last:hover:!text-black-thin group-last:hover:!border-black-thin"]:
-                            !!toggleClassNames,
+                          ["group-last:hover:!text-black-thin group-last:hover:!border-black-thin"]: !!toggleClassNames,
                         }
                       )}
                     >
