@@ -8,11 +8,11 @@ export const ABOUT_ID_HREF = "ABOUT_ID_HREF";
 export const ABOUT_LABEL = "GET YOUR SHINE ON";
 export const ABOUT_TITLE = "Skilled Nail Art";
 export const ABOUT_DESCRIPTION =
-  "Nullam tempor sapien gravida donec and pretium ipsum porta integer justo an odio velna vitae auctor integer congue magna undo purus a pretium ligula rutrum magna egestas";
+  "At Skilled Nail Art, we believe in the power of creativity and precision. Our expert nail artists transform your nails into stunning works of art, ensuring you leave with a unique and polished look every time.";
 export const ABOUT_ITEM_1 =
-  "Aliquam vitae molestie at quisque sapien volutpat and justo, aliquet molestie purus efficitur ipsum";
+  "Whether you’re looking for a classic manicure, a bold new design, or something in between, we’ve got you covered.";
 export const ABOUT_ITEM_2 =
-  "Sagittis congue augue magna risus mauris volutpat and egestas magna suscipit egestas a vitae purus";
+  "Our wide range of services includes everything from simple nail care to intricate nail art, all tailored to your individual style and preferences.";
 
 export const SKILL_NAIL_ART_ID_HREF = "SKILL_NAIL_ART_ID_HREF";
 export const SKILL_NAIL_ART_TITLE = "CHOOSE THE BEAUTY";
@@ -31,12 +31,12 @@ export const SHINING_FEMENINE_ID = "SHINING_FEMENINE_ID_HREF";
 export const SHINING_FEMENINE_LABEL = "GET YOUR SHINE ON";
 export const SHINING_FEMENINE_TITLE = "Shining Feminine";
 export const SHINING_FEMENINE_DESCRIPTION =
-  "Nullam tempor sapien gravida donec and pretium ipsum porta integer justo odio velna a vitae auctor justo integer congue undo purus ligula a pretium rutrum egestas";
+  "Embrace your elegance with Shining Feminine. We offer a variety of nail services designed to make you feel beautiful and confident. Our experienced technicians provide meticulous care and artistic designs tailored to your style.";
 export const SHINING_FEMENINE_LIST_TITLE = "Elegance in Every Stroke";
 export const SHINING_FEMENINE_ITEM_1 =
-  "Aliquam vitae molestie at quisque sapien volutpat and justo, aliquet molestie purus efficitur ipsum";
+  "Experience the perfect blend of luxury and precision with every visit. Our services range from classic manicures to intricate nail art, all crafted with high-quality products in a relaxing atmosphere.";
 export const SHINING_FEMENINE_ITEM_2 =
-  "Sagittis congue augue magna risus mauris volutpat and egestas magna suscipit egestas a vitae purus";
+  "Whether you're preparing for a special occasion or simply treating yourself, Shining Feminine ensures that every stroke of polish enhances your natural beauty and leaves you shining.";
 
 export const PRICE_ID_HREF = "PRICE_ID_HREF";
 export const PRICE_TITLE = "FRESH, SHINY, BRIGHT";
@@ -50,12 +50,12 @@ export const REVEAL_COLOURFUL_ID_HREF = "REVEAL_COLOURFUL_ID_HREF";
 export const REVEAL_COLOURFUL_LABEL = "GET YOUR SHINE ON";
 export const REVEAL_COLOURFUL_TITLE = "Reveal Colourful You";
 export const REVEAL_COLOURFUL_DESCRIPTION =
-  "Nullam tempor sapien gravida donec and pretium ipsum porta integer justo odio velna a vitae auctor justo integer congue undo purus ligula a pretium rutrum egestas";
+  "Discover a vibrant expression of yourself with our expert nail services. At Floral Crush Beauty, we believe in showcasing your unique personality through a spectrum of colors and designs that highlight your individuality and style.";
 export const REVEAL_COLOURFUL_LIST_TITLE = "A Personal Touch";
 export const REVEAL_COLOURFUL_ITEM_1 =
   "Aliquam vitae molestie at quisque sapien volutpat and justo, aliquet molestie purus efficitur ipsum";
 export const REVEAL_COLOURFUL_ITEM_2 =
-  "Sagittis congue augue magna risus mauris volutpat and egestas magna suscipit egestas a vitae purus";
+  "Our dedicated team of professionals offers a personalized experience, ensuring every detail is tailored to your preferences. From elegant classics to bold statements, we provide a range of options that cater to your taste and make you feel truly special.";
 
 export const FEEDBACK_ID_HREF = "FEEDBACK_ID_HREF";
 export const FEEDBACK_TITLE = "TESTIMONIALS";
