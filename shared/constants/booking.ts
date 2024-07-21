@@ -1,4 +1,4 @@
-import { PRICE } from "./price";
+import { PRICES } from "./services";
 
 export const PLACE_HOLDER_BOOKING = {
   FIRST_NAME: "First Name *",
@@ -10,7 +10,7 @@ export const PLACE_HOLDER_BOOKING = {
   TIME_BOOKING: "Appointment Date *",
 };
 
-export const SERVICES = PRICE.map((item) =>
+export const SERVICES = PRICES.map((item) =>
   item.services.map((service) => service.label)
 ).flat();
 

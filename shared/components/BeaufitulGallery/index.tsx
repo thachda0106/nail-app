@@ -5,22 +5,27 @@ import {
 } from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
 import React, { Fragment } from "react";
-import BeautifulOption1 from "@assets/images/beautiful_1.jpg";
-import BeautifulOption2 from "@assets/images/beautiful_2.jpg";
-import BeautifulOption3 from "@assets/images/beautiful_3.jpg";
+import GallerylOption1 from "@assets/images/gallery_1.jpg";
+import GallerylOption2 from "@assets/images/gallery_2.jpg";
+import GallerylOption3 from "@assets/images/gallery_3.jpg";
+import GallerylOption4 from "@assets/images/gallery_4.jpg";
+import GallerylOption5 from "@assets/images/gallery_5.jpg";
+import GallerylOption6 from "@assets/images/gallery_6.jpg";
+import GallerylOption7 from "@assets/images/gallery_7.jpg";
+import GallerylOption8 from "@assets/images/gallery_8.jpg";
 import Image from "next/image";
 import clsx from "clsx";
 import styles from "./index.module.css";
 
 const BeautifulList = [
-  { image: BeautifulOption1 },
-  { image: BeautifulOption2 },
-  { image: BeautifulOption3 },
-  { image: BeautifulOption1 },
-  { image: BeautifulOption2 },
-  { image: BeautifulOption3 },
-  { image: BeautifulOption1 },
-  { image: BeautifulOption2 },
+  { image: GallerylOption1 },
+  { image: GallerylOption2 },
+  { image: GallerylOption3 },
+  { image: GallerylOption4 },
+  { image: GallerylOption5 },
+  { image: GallerylOption6 },
+  { image: GallerylOption7 },
+  { image: GallerylOption8 },
 ];
 
 const BeautifulGallery = () => {

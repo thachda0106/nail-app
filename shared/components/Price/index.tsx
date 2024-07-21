@@ -7,9 +7,9 @@ import {
 } from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
 import React, { useRef } from "react";
-import Gel from "@assets/images/gel.png";
+import Gel from "@assets/images/nails_polish.png";
 import Image from "next/image";
-import { PRICE } from "@/shared/constants/price";
+import { PRICES } from "@/shared/constants/services";
 import { useViewPort } from "@/shared/hooks/useViewPort";
 
 type RowPriceProps = {
@@ -23,20 +23,19 @@ const RowPrice: React.FC<RowPriceProps> = ({ label, value, description }) => {
     <Stack width={"100%"}>
       <Stack direction={"row"} alignItems={"baseline"}>
         <Typography
-          className={"text-2xl text-gray-base font-semibold font-lora"}
+          className={
+            "text-xl text-gray-base font-semibold font-lora tracking-[0.25px]"
+          }
         >
           {label}
         </Typography>
         <Typography className={"border-b border-dashed flex-1"}></Typography>
         <Typography
-          className={"text-2xl text-gray-base font-semibold font-lora"}
+          className={"text-xl text-gray-base font-semibold font-lora"}
         >
           {value}
         </Typography>
       </Stack>
-      <Typography className={"text-lg text-gray-medium tracking-widest italic"}>
-        {description}
-      </Typography>
     </Stack>
   );
 };
@@ -44,26 +43,22 @@ const RowPrice: React.FC<RowPriceProps> = ({ label, value, description }) => {
 type ColumnPriceProps = {
   data: {
     type: string;
-    description: string;
     services: RowPriceProps[];
+    href?: string;
   };
 };
 
 const ColumnPrice: React.FC<ColumnPriceProps> = ({ data }) => {
-  const { type, description, services } = data;
+  const { type, services, href } = data;
   return (
-    <Stack className="gap-3 xl:gap-7">
-      <Typography className={"font-bold text-sm text-gray-primary"}>
+    <Stack className="gap-3 xl:gap-5">
+      <Typography
+        className={"font-bold text-sm text-gray-primary tracking-[2px]"}
+        id={href}
+      >
         {type}
       </Typography>
-      <Typography
-        className={
-          "font-semibold font-lora text-[28px] text-gray-base tracking-[2px] mb-1 lg:mb-3"
-        }
-      >
-        {description}
-      </Typography>
-      <Stack>
+      <Stack spacing={2}>
         {services.map((item, index) => (
           <RowPrice
             label={item.label}
@@ -97,7 +92,7 @@ const Price = () => {
     >
       <Stack className="flex-col-reverse lg:flex-row items-center gap-8 xl:gap-16 w-full">
         <Box className="w-full lg:w-[50%] h-[200px] relative fade_in_left">
-          <Image src={Gel} alt="gel" fill />
+          <Image src={Gel} alt="gel" fill className="h-auto object-fill" />
         </Box>
         <Box
           className={
@@ -114,20 +109,59 @@ const Price = () => {
           <Typography
             variant="h3"
             className={
-              "text-3xl lg:text-4xl font-lora font-semibold text-gray-base text-center xl:text-left"
+              "text-3xl lg:text-4xl font-lora font-semibold text-gray-base text-center md:text-left"
             }
           >
             {PRICE_DESCRIPTION}
           </Typography>
         </Box>
       </Stack>
-      <Stack className="w-full gap-8 xl:gap-16 lg:flex-row">
-        <Box className={"w-full lg:w-[50%] fade_in_up"}>
-          <ColumnPrice data={PRICE[0]} />
-        </Box>
-        <Box className={"w-full lg:w-[50%] fade_in_up"}>
-          <ColumnPrice data={PRICE[1]} />
-        </Box>
+
+      <Stack className={"w-full flex-col gap-5"}>
+        <Stack className="w-full gap-8 xl:gap-16 lg:flex-row">
+          <Box className={"w-full lg:w-[50%] fade_in_up"}>
+            <ColumnPrice data={PRICES[0]} />
+          </Box>
+          <Box className={"w-full lg:w-[50%] fade_in_up"}>
+            <ColumnPrice data={PRICES[1]} />
+          </Box>
+        </Stack>
+
+        <Stack className="w-full gap-8 xl:gap-16 lg:flex-row">
+          <Box className={"w-full lg:w-[50%] fade_in_up"}>
+            <ColumnPrice data={PRICES[2]} />
+          </Box>
+          <Box className={"w-full lg:w-[50%] fade_in_up"}>
+            <ColumnPrice data={PRICES[3]} />
+          </Box>
+        </Stack>
+
+        <Stack className="w-full gap-8 xl:gap-16 lg:flex-row">
+          <Box className={"w-full lg:w-[50%] fade_in_up"}>
+            <ColumnPrice data={PRICES[4]} />
+          </Box>
+          <Box className={"w-full lg:w-[50%] fade_in_up"}>
+            <ColumnPrice data={PRICES[5]} />
+          </Box>
+        </Stack>
+
+        <Stack className="w-full gap-8 xl:gap-16 lg:flex-row">
+          <Box className={"w-full lg:w-[50%] fade_in_up"}>
+            <ColumnPrice data={PRICES[6]} />
+          </Box>
+          <Box className={"w-full lg:w-[50%] fade_in_up"}>
+            <ColumnPrice data={PRICES[7]} />
+          </Box>
+        </Stack>
+
+        <Stack className="w-full gap-8 xl:gap-16 lg:flex-row">
+          <Box className={"w-full lg:w-[50%] fade_in_up"}>
+            <ColumnPrice data={PRICES[8]} />
+          </Box>
+          <Box className={"w-full lg:w-[50%] fade_in_up"}>
+            <ColumnPrice data={PRICES[9]} />
+          </Box>
+        </Stack>
       </Stack>
     </Box>
   );

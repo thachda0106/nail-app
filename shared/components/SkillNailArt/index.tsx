@@ -1,6 +1,8 @@
 "use client";
 
 import {
+  EYESLASH_ID_HREF,
+  MANICURE_ID_HREF,
   PRICE_ID_HREF,
   SKILL_NAIL_ART_DESCRIPTION,
   SKILL_NAIL_ART_ID_HREF,
@@ -8,12 +10,13 @@ import {
   SKILL_NAIL_ART_OPTIONS_2,
   SKILL_NAIL_ART_OPTIONS_3,
   SKILL_NAIL_ART_TITLE,
+  WAXING_ID_HREF,
 } from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
 import React, { Fragment, useRef } from "react";
-import BeautifulOption1 from "@assets/images/beautiful_1.jpg";
-import BeautifulOption2 from "@assets/images/beautiful_2.jpg";
-import BeautifulOption3 from "@assets/images/beautiful_3.jpg";
+import ManicureImage from "@assets/images/manicure.svg";
+import EyeslashImage from "@assets/images/eyeslash.svg";
+import WaxingImage from "@assets/images/waxing.svg";
 import Image from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
@@ -21,9 +24,17 @@ import styles from "./index.module.css";
 import { useViewPort } from "@/shared/hooks/useViewPort";
 
 const BeautifulList = [
-  { image: BeautifulOption1, label: SKILL_NAIL_ART_OPTIONS_1 },
-  { image: BeautifulOption2, label: SKILL_NAIL_ART_OPTIONS_2 },
-  { image: BeautifulOption3, label: SKILL_NAIL_ART_OPTIONS_3 },
+  {
+    image: ManicureImage,
+    label: SKILL_NAIL_ART_OPTIONS_1,
+    href: MANICURE_ID_HREF,
+  },
+  {
+    image: EyeslashImage,
+    label: SKILL_NAIL_ART_OPTIONS_2,
+    href: EYESLASH_ID_HREF,
+  },
+  { image: WaxingImage, label: SKILL_NAIL_ART_OPTIONS_3, href: WAXING_ID_HREF },
 ];
 
 const SkillNailArt = () => {
@@ -86,7 +97,7 @@ const SkillNailArt = () => {
                 </Box>
 
                 <Link
-                  href={`#${PRICE_ID_HREF}`}
+                  href={`#${item.href}`}
                   scroll={true}
                   className={clsx(
                     "w-fit font-lora text-2xl font-semibold text-gray-base tracking-widest text-center",

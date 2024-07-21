@@ -18,8 +18,8 @@ export const SKILL_NAIL_ART_ID_HREF = "SKILL_NAIL_ART_ID_HREF";
 export const SKILL_NAIL_ART_TITLE = "CHOOSE THE BEAUTY";
 export const SKILL_NAIL_ART_DESCRIPTION = "Peace, Love & Nails";
 export const SKILL_NAIL_ART_OPTIONS_1 = `Mani's & Pedi's`;
-export const SKILL_NAIL_ART_OPTIONS_2 = `Acrylic & Gel's`;
-export const SKILL_NAIL_ART_OPTIONS_3 = `Add-on & Massages`;
+export const SKILL_NAIL_ART_OPTIONS_2 = `Eyeslash`;
+export const SKILL_NAIL_ART_OPTIONS_3 = `Waxing`;
 
 export const TIME_ID_HREF = "TIME_ID_HREF";
 export const TIME_LABEL = "TIME SCHEDULE";
@@ -69,5 +69,9 @@ export const CONTACT_ID_HREF = "CONTACT_ID_HREF";
 
 export const BOOKING_OFFER_TITLE = "Book Your Visit Online";
 export const BOOKING_OFFER_DESCRIPTION = "SAVE UP TO";
-export const BOOKING_OFFER_SALES = "30% OFF";
+export const BOOKING_OFFER_SALES = "25% OFF";
 export const BOOKING_OFFER_BUTTON = "BOOKING NOW";
+
+export const EYESLASH_ID_HREF = "EYESLASH_ID_HREF";
+export const MANICURE_ID_HREF = "MANICURE_ID_HREF";
+export const WAXING_ID_HREF = "WAXING_ID_HREF";
