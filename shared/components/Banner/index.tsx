@@ -29,13 +29,17 @@ const Banner = () => {
       id={BANNER_ID_HREF}
     >
       <Stack
+        direction={'row-reverse'}
+        justifyContent={'center'}
         className={
-          "flex-row-reverse w-full justify-center min-h-screen px-5 xl:px-0"
+          "w-full min-h-screen px-5 xl:px-0"
         }
       >
         <Stack
+          flexDirection={isMobile ? 'column' : 'row'}
+          alignItems={'center'}
           className={
-            "md:flex-row items-center w-full max-w-[1080px] gap-5 xl:gap-0"
+            "w-full max-w-[1080px] gap-5 xl:gap-0"
           }
         >
           <Box

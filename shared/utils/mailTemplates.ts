@@ -6,7 +6,6 @@ export const defineBookingMailHTML = ({
   last_name,
   phone_number,
   services,
-  staff_name,
   time_booking,
 }: IBookingForm) => {
   return `
@@ -26,9 +25,8 @@ export const defineBookingMailHTML = ({
       style="max-width:37.5em;margin:0;padding:20px 0 48px">
       <tr style="width:100%">
         <td>
-          <h1 style="font-size:20px;line-height:26px;">The customer want to book an appointment for a manicure.</h1>
+          <h1 style="font-size:20px;line-height:26px;">Booking information:</h1>
           <p style="font-size:16px;line-height:26px;margin:16px 0">- Customer: <strong>${first_name} ${last_name}</strong></p>
-          <p style="font-size:16px;line-height:26px;margin:16px 0">- Staff: <strong>${staff_name || ''}</strong></p>
           <p style="font-size:16px;line-height:26px;margin:16px 0">- Services: <strong>${services || ''}</strong></p>
           <p style="font-size:16px;line-height:26px;margin:16px 0">- Booking time: <strong>${time_booking}</strong></p>
           <p style="font-size:16px;line-height:26px;margin:16px 0">- Email: <strong>${email}</strong></p>

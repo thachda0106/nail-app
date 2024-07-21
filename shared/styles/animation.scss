@@ -1,7 +1,19 @@
 @keyframes fadeInLeft {
   0% {
-    opacity: 0;
-    transform: translateX(15%);
+    opacity: 0.0;
+    transform: translateX(50%);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateX(35%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(25%);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateX(10%);
   }
   100% {
     opacity: 1;
@@ -10,17 +22,24 @@
 }
 
 .animation_start .fade_in_left {
-  animation: fadeInLeft 1.5s ease-in-out ;
-  animation-delay: 0.3s;
+  animation: fadeInLeft 1s linear;
 }
 
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(-15%);
+    transform: translateX(-50%);
   }
-  30% {
-    opacity: 0;
+  25% {
+    opacity: 0.25;
+    transform: translateX(-35%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-25%);
+  }
+  75% {
+    opacity: 0.75;
     transform: translateX(-10%);
   }
   100% {
@@ -30,12 +49,12 @@
 }
 
 .animation_start .fade_in_right {
-  animation: fadeInRight 1s ease-in;
+  animation: fadeInRight 1s linear;
 }
 
 @keyframes fadeInUp {
   from {
-    opacity: 0.2;
+    opacity: 1.2;
     transform: translate3d(0, 20%, 0);
   }
 
@@ -46,5 +65,5 @@
 }
 
 .animation_start .fade_in_up {
-  animation: fadeInUp 0.8s ease-in;
+  animation: fadeInUp 0.8s linear;
 }

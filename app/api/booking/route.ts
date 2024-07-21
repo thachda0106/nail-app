@@ -20,17 +20,25 @@ export async function POST(request: NextRequest) {
 
     const mailSender = new MailSender();
 
-    const info = await mailSender.sendMail({
-      from: `<${bookingInfo.email}>`,
-      to: `${process.env.MAIL_USERNAME}`,
-      subject: "BOOKING TIME",
-      text: "I want to book an appointment for a manicure.",
-      html: defineBookingMailHTML((bookingInfo as unknown) as IBookingForm),
-    });
+    await Promise.all([
+      mailSender.sendMail({
+        from: `<${bookingInfo.email}>`,
+        to: `${process.env.MAIL_USERNAME}`,
+        subject: "BOOKING TIME",
+        text: "The customer want to book an appointment for a manicure.",
+        html: defineBookingMailHTML((bookingInfo as unknown) as IBookingForm),
+      }),
+      mailSender.sendMail({
+        from: `<${process.env.MAIL_USERNAME}>`,
+        to: `${bookingInfo.email}`,
+        subject: "BOOKING INFORMATION",
+        text: "You Just booked an appointment for a manicure.",
+        html: defineBookingMailHTML((bookingInfo as unknown) as IBookingForm),
+      })
+    ])
 
     return ApiResponser.ok({
       statusCode: HTTP_STATUS_CODES.Success,
-      data: info,
       message: "Booking successfully.",
     });
   } catch (error: any) {

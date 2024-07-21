@@ -18,7 +18,7 @@ type RowPriceProps = {
   description?: string;
 };
 
-const RowPrice: React.FC<RowPriceProps> = ({ label, value, description }) => {
+const RowPrice: React.FC<RowPriceProps> = ({ label, value }) => {
   return (
     <Stack width={"100%"}>
       <Stack direction={"row"} alignItems={"baseline"}>

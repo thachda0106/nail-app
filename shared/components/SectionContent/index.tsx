@@ -1,7 +1,8 @@
 import { Box, List, ListItem, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import clsx from "clsx";
+import { useViewPort } from "@/shared/hooks/useViewPort";
 
 type SectionContentProps = {
   imageSrc: StaticImageData;
@@ -22,8 +23,15 @@ const SectionContent: React.FC<SectionContentProps> = ({
   listItem,
   isReverse = false,
 }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { isVisible } = useViewPort(ref);
+
   return (
-    <Stack className={"flex-row-reverse w-full justify-center"}>
+    <Stack
+      component={"div"}
+      ref={ref}
+      className={"flex-row-reverse w-full justify-center"}
+    >
       <Stack
         className={clsx(
           "flex-col-reverse items-center w-full max-w-[1080px] gap-8 xl:gap-16",
@@ -34,9 +42,12 @@ const SectionContent: React.FC<SectionContentProps> = ({
         )}
       >
         <Box
-          className={
-            "relative w-full md:w-[45%] md:h-[600px] fade_in_left flex items-center"
-          }
+          className={clsx(
+            "relative w-full md:w-[45%] md:h-[600px] flex items-center",
+            {
+              fade_in_left: isVisible,
+            }
+          )}
         >
           <Image
             src={imageSrc}
@@ -44,7 +55,11 @@ const SectionContent: React.FC<SectionContentProps> = ({
             className={"object-contain h-auto"}
           />
         </Box>
-        <Box className={"flex flex-1 flex-col gap-2 fade_in_right"}>
+        <Box
+          className={clsx("flex flex-1 flex-col gap-2", {
+            fade_in_right: isVisible,
+          })}
+        >
           {!!label && (
             <Typography
               className={

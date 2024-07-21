@@ -4,7 +4,7 @@ export const useViewPort = (
   targetRef: React.MutableRefObject<HTMLElement | null>,
   callback?: () => void
 ) => {
-  const [isVisiable, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,5 +32,5 @@ export const useViewPort = (
     };
   }, []);
 
-  return { isVisiable };
+  return { isVisible };
 };

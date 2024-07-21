@@ -25,7 +25,7 @@ export const TIME_ID_HREF = "TIME_ID_HREF";
 export const TIME_LABEL = "TIME SCHEDULE";
 export const TIME_TITLE = "Working Hours";
 export const TIME_DESCRIPTION =
-  "Gravida porta vitae auctor congue magna impedit ligula and risus mauris donec ligula magnis aliqum mullam and primis risus undo donec luctus neque feugiat suscipit risus auctor egestas an augue mauri ligula magnis aliqum sapien vitae nemo egestas";
+  "We are committed to providing prompt and efficient service during these hours. Please reach out to us within this timeframe for any assistance or inquiries.";
 
 export const SHINING_FEMENINE_ID = "SHINING_FEMENINE_ID_HREF";
 export const SHINING_FEMENINE_LABEL = "GET YOUR SHINE ON";

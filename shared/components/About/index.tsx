@@ -12,23 +12,13 @@ import {
   ABOUT_TITLE,
 } from "@constants/common";
 import SectionContent from "../SectionContent";
-import { useViewPort } from "@/shared/hooks/useViewPort";
 
 const About = () => {
-  const aboutRef = useRef<HTMLElement>(null);
-
-  const handleInViewport = () => {
-    aboutRef.current?.classList.add("animation_start");
-  };
-
-  useViewPort(aboutRef, handleInViewport);
-
   return (
     <Box
       component={"section"}
-      className="w-full py-25 px-5 xl:px-0 my-10 xl:my-0 mx-auto"
+      className="w-full py-25 px-5 xl:px-0 my-10 xl:my-0 mx-auto animation_start"
       id={ABOUT_ID_HREF}
-      ref={aboutRef}
     >
       <SectionContent
         imageSrc={AvatarImage}
