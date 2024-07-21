@@ -1,41 +1,52 @@
 export const FEEDBACKS = [
   {
-    name: "MARIA OZAWA",
+    name: "Jessica L.",
     feedback:
-      "At sagittis congue augue undo egestas magna ipsum vitae purus primis suscipit and blandit a cursus molestie at quisque sapien and integer congue magna",
+      "Amazing service! My nails look perfect, and the staff was incredibly friendly and professional. Highly recommend!",
   },
   {
-    name: "MONKEY D.LUFFY",
+    name: "Sarah K.",
     feedback:
-      "Aliquam augue a suscipit luctus neque purus ipsum neque dolor primis libero at tempus blandit posuere magna sagittis congue augue magna risus mauris and volutpat and egestas",
+      "Great experience overall. The ambiance is lovely, and my manicure turned out beautifully.",
   },
   {
-    name: "SARAH D",
+    name: "Emily R.",
     feedback:
-      "An augue cubilia laoreet magna sapien suscipit undo egestas magna ipsum ligula vitae a purus cubilia a blandit and auctor integer congue magna undo justo purus pretium ligula efficitur ipsum",
+      "Loved my visit! The technicians are skilled, and the salon is spotless. My nails look fantastic!",
   },
   {
-    name: "PANCHO",
+    name: "Olivia M.",
     feedback:
-      "Mauris donec magnis a sapien etiam sapien and congue augue egestas ultrice vitae purus velna integer tempor congue egestas a vitae purus",
+      "Best nail salon ever! The staff is professional and welcoming. My manicure and pedicure were flawless. Will definitely return.",
   },
   {
-    name: "JOHN SMITH",
+    name: "Ava P.",
     feedback:
-      "Etiam sapien sagittis congue an augue massa varius egestas suscipit  magna a tempus and aliquet rutrum magna",
+      "Great atmosphere and excellent service. My nails look great and the staff is wonderful.",
   },
   {
-    name: "RF",
+    name: "Sophia J.",
     feedback:
-      "″At sagittis congue augue undo egestas magna ipsum vitae purus primis suscipit and blandit a cursus molestie at quisque sapien and integer congue magna″",
+      "Fantastic experience! The nail techs are talented and attentive. My nails have never looked better. Highly recommend!",
   },
   {
-    name: "SOMETHINGS",
+    name: "Mia W.",
     feedback:
-      "An augue cubilia laoreet magna sapien suscipit undo egestas magna ipsum ligula vitae a purus cubilia a blandit and auctor integer congue magna undo justo purus pretium ligula efficitur ipsum",
+      "Amazing service! The salon is clean and stylish, and my nails look stunning. Will definitely be coming back!",
   },
   {
-    name: "ANONYMOUS",
-    feedback: "Kill me",
+    name: "Isabella T.",
+    feedback:
+      "Wonderful service! The staff was friendly, and my nails look fabulous.",
+  },
+  {
+    name: "Amelia B.",
+    feedback:
+      "Incredible experience! My nails look perfect, and the staff was so friendly.",
+  },
+  {
+    name: "Charlotte N.",
+    feedback:
+      "Excellent service! My nails have never looked better, and the staff was very professional.",
   },
 ];

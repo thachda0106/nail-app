@@ -124,7 +124,7 @@ const Footer = () => {
             className="h-[300px] md:h-[150px] w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-3*24px)/4)]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.888598219116!2d106.70799907480443!3d10.743068489403711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9d3b606717%3A0x6e4f8c8e76ddd3c5!2zMzYgxJDGsOG7nW5nIFPhu5EgMjcsIFTDom4gUXV5LCBRdeG6rW4gNywgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1720863935810!5m2!1svi!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.0889574698454!2d-64.92211322340223!3d47.48818037117922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4c9f49029544b609%3A0xe0f933a4f176a1b9!2s4093%20Rue%20Principale%2C%20Tracadie-Sheila%2C%20NB%20E1X%201B8%2C%20Canada!5e0!3m2!1svi!2s!4v1721538546191!5m2!1svi!2s"
               width={"100%"}
               height={"100%"}
               style={{ border: 0 }}
@@ -139,7 +139,7 @@ const Footer = () => {
           className="text-gray-medium flex mt-5 flex-col items-end md:flex-row md:justify-between"
         >
           <Typography component={"span"} className="w-fit">
-            © 2024 Nail Store. All Rights Reserved.
+            © 2024 Floral Crush Beauty. All Rights Reserved.
           </Typography>
           <Typography component={"span"} className="w-fit">
             Privacy Policy Terms & Conditions{" "}

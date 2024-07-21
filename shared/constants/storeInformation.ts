@@ -7,14 +7,14 @@ export const STORE_INFORMATION = {
     description: 'Enjoy personalized treatments and meticulous care designed to leave you feeling rejuvenated and beautiful.',
   },
   Contacts: {
-    phoneNumber: "+84906303704",
-    email: "thachda010600@gmail.com",
+    phoneNumber: "+1 506-210-4191",
+    email: "floral_crush_beauty@gmail.com",
   },
   OpeningHours: TIME_WORKING.map((item) => `${item.label}: ${item.value}`),
   Socials: {
-    Facebook: "facebook.com",
-    Instagram: "instagram.com",
-    Twitter: "twitter.com",
+    Facebook: "https://web.facebook.com/profile.php?id=61561852982077",
+    Instagram: "https://web.facebook.com/profile.php?id=61561852982077",
+    Twitter: "https://web.facebook.com/profile.php?id=61561852982077",
   },
 };
 
