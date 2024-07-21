@@ -11,12 +11,12 @@ import PhoneIcon from "@mui/icons-material/SettingsPhoneOutlined";
 import Link from "next/link";
 import MenuDrawer from "../MenuDrawer";
 import { MENUS } from "@constants/menus";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { STORE_INFORMATION } from "@/shared/constants/storeInformation";
 import { scrollToElementById } from "@/shared/utils/scroll";
 import { useWindowScrollPositions } from "@/shared/hooks/useWindowScrollPositions";
-import LogoWhite from "@/public/assets/images/logo-white.png";
-import LogoBlack from "@/public/assets/images/logo-black.png";
+import LogoWhite from "@/public/assets/images/main-logo-white.svg";
+import LogoBlack from "@/public/assets/images/main-logo-black.svg";
 import clsx from "clsx";
 
 const SCROLL_THRESHOLD = 70;
@@ -49,12 +49,9 @@ const Header = () => {
             width: isMobile ? "100dvw" : "100%",
           }}
           component={"div"}
-          className={clsx(
-            "transition-all duration-300 ease-in-out delay-75",
-            {
-              ["py-[10px]"]: !toggleClassNames,
-            }
-          )}
+          className={clsx("transition-all duration-300 ease-in-out delay-75", {
+            ["py-[10px]"]: !toggleClassNames,
+          })}
         >
           <Stack
             component={"div"}
@@ -71,15 +68,15 @@ const Header = () => {
                 <PhoneIcon className="text-gray-icon text-[30px]" />
               </Link>
             )}
-            <Image
-              width={129}
-              height={45}
-              src={logoPath}
-              fetchPriority="high"
-              alt="logo"
-              className="h-fit self-center cursor-pointer"
-              onClick={() => router.push("/")}
-            />
+            <Box className={"cursor-pointer w-[129px] h-[70px] relative"}>
+              <Image
+                fill
+                src={logoPath}
+                fetchPriority="high"
+                alt="logo"
+                onClick={() => router.push("/")}
+              />
+            </Box>
             {isMobile ? (
               <Box
                 component={"span"}
@@ -114,7 +111,8 @@ const Header = () => {
                           ["menu-underline hover:menu-active"]: !isLastMenu,
                           ["!text-black-thin"]: !!toggleClassNames,
                           ["bg-image-white"]: !isLastMenu && !toggleClassNames,
-                          ["group-last:hover:!text-black-thin group-last:hover:!border-black-thin"]: !!toggleClassNames,
+                          ["group-last:hover:!text-black-thin group-last:hover:!border-black-thin"]:
+                            !!toggleClassNames,
                         }
                       )}
                     >
