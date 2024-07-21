@@ -7,11 +7,11 @@ interface PropsType {
 }
 const MainLayout: React.FC<PropsType> = ({ children }) => {
   return (
-    <Suspense>
+    <>
       <Header />
       {children}
       <Footer />
-    </Suspense>
+    </>
   );
 };
 

@@ -16,9 +16,14 @@ import Link from "next/link";
 import clsx from "clsx";
 import useMobileScreen from "@/shared/hooks/useMobileScreen";
 import { scrollToElementById } from "@/shared/utils/scroll";
+import { BREAK_POINTS, DEVICE_TYPES } from "@/shared/constants/breakpoints";
 
-const Banner = () => {
-  const isMobile = useMobileScreen();
+interface PropsType {
+  device: DEVICE_TYPES,
+}
+
+const Banner: React.FC<PropsType> = ({ device }) => {
+  const isMobile = useMobileScreen(BREAK_POINTS.Small, device);
 
   return (
     <Box

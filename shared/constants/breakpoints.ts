@@ -6,7 +6,7 @@ export const BREAK_POINTS = {
   SuperLarge: 1440,
 };
 
-export const DEVICE_TYPES = {
-  Mobile: 'mobile',
-  Desktop: 'desktop',
+export enum DEVICE_TYPES {
+  Mobile = 'mobile',
+  Desktop = 'desktop',
 };

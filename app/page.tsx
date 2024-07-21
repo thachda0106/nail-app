@@ -11,11 +11,14 @@ import SkillNailArt from "@/shared/components/SkillNailArt";
 import TimeWorking from "@/shared/components/TimeWorking";
 import { IPageContext } from "@/shared/types/context";
 import { Stack } from "@mui/material";
+import { createContext } from "react";
 
-const Home: React.FC<IPageContext> = () => {
+const Home: React.FC<IPageContext> = ({ searchParams }) => {
+  const { device } = searchParams;
+
   return (
     <Stack component={"div"} justifyItems={"center"} alignItems={"center"}>
-      <Banner />
+      <Banner device={device} />
       <About />
       <SkillNailArt />
       <TimeWorking />
