@@ -1,36 +1,3 @@
-import About from "@/shared/components/About";
-import Banner from "@/shared/components/Banner";
-import BeautifulGallery from "@/shared/components/BeaufitulGallery";
-import Booking from "@/shared/components/Booking";
-import BookingOffer from "@/shared/components/BookingOffer";
-import Feedback from "@/shared/components/Feedback";
-import Price from "@/shared/components/Price";
-import RevealColourful from "@/shared/components/RevealColourful";
-import ShiningFeminine from "@/shared/components/ShiningFeminine";
-import SkillNailArt from "@/shared/components/SkillNailArt";
-import TimeWorking from "@/shared/components/TimeWorking";
-import { IPageContext } from "@/shared/types/context";
-import { Stack } from "@mui/material";
-import { createContext } from "react";
+import dynamic from "next/dynamic";
 
-const Home: React.FC<IPageContext> = ({ searchParams }) => {
-  const { device } = searchParams;
-
-  return (
-    <Stack component={"div"} justifyItems={"center"} alignItems={"center"}>
-      <Banner device={device} />
-      <About />
-      <SkillNailArt />
-      <TimeWorking />
-      <ShiningFeminine />
-      <Price />
-      <BookingOffer />
-      <BeautifulGallery />
-      <RevealColourful />
-      <Feedback />
-      <Booking />
-    </Stack>
-  );
-};
-
-export default Home;
+export default dynamic (() => import("@modules/home/views") ) ;

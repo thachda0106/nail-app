@@ -29,7 +29,8 @@
       "@constants/*": ["./shared/constants/*"],
       "@themes/*": ["./shared/themes/*"],
       "@types/*": ["./shared/types/*"],
-      "@helpers/*": ["./shared/helpers/*"]
+      "@helpers/*": ["./shared/helpers/*"],
+      "@modules/*": ["./modules/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
