@@ -268,3 +268,11 @@ export const PRICES = [
     ],
   },
 ];
+
+export const priceGroupedOptions = PRICES.map((price) => ({
+  label: price.type,
+  options: price.services.map((service) => ({
+    label: service.label,
+    value: service.label,
+  })),
+}));

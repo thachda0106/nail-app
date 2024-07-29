@@ -2,46 +2,15 @@
 
 import { PLACE_HOLDER_BOOKING } from "@/shared/constants/booking";
 import useBooking from "@/shared/hooks/useBooking";
-import {
-  TextField,
-  Stack,
-  Button,
-  Select,
-  MenuItem,
-  Typography,
-  CircularProgress,
-  ListSubheader,
-} from "@mui/material";
+import { TextField, Stack, Button, CircularProgress } from "@mui/material";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import React from "react";
 import { Controller } from "react-hook-form";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { PRICES } from "@/shared/constants/services";
+import { priceGroupedOptions } from "@/shared/constants/services";
 
-type SelectGroupBookingProps = {
-  service: {
-    services: {
-      label: string;
-    }[];
-    type: string;
-  };
-};
-
-const SelectGroupBooking = ({ service }: SelectGroupBookingProps) => {
-  return (
-    <>
-      <ListSubheader key={service.type} sx={{ fontStyle: "italic" }}>
-        {service.type}
-      </ListSubheader>
-      {service.services.map((item, index) => (
-        <MenuItem key={`${item.label}${index}`} value={item.label}>
-          {item.label}
-        </MenuItem>
-      ))}
-    </>
-  );
-};
+import SelectGroup from "../SelectGroup";
 
 const FormBooking = () => {
   const { control, handleSubmit, onSubmit, isValid, isSubmitting } =
@@ -168,37 +137,15 @@ const FormBooking = () => {
           <Controller
             name="services"
             control={control}
-            render={({ field: { value, onChange }, fieldState: { error } }) => (
-              <Select
-                displayEmpty
+            render={({ field: { value, onChange } }) => (
+              <SelectGroup
+                options={priceGroupedOptions}
                 value={value}
                 onChange={onChange}
-                error={!!error?.message}
-                sx={{
-                  width: "100%",
-                  ".MuiInputBase-input": {
-                    background: "white",
-                  },
-                }}
-                renderValue={(selected) => {
-                  if (selected.length === 0) {
-                    return (
-                      <Typography color={"#a2a2a2"}>
-                        {PLACE_HOLDER_BOOKING.SERVICES}
-                      </Typography>
-                    );
-                  }
-
-                  return selected;
-                }}
-              >
-                <MenuItem value={""} style={{ fontStyle: "italic" }}>
-                  None
-                </MenuItem>
-                {PRICES.map((service) => (
-                  <SelectGroupBooking service={service} key={service.type} />
-                ))}
-              </Select>
+                classBox={"w-full h-[56px]"}
+                placeholder={PLACE_HOLDER_BOOKING.SERVICES}
+                isClearable={true}
+              />
             )}
           />
           {/* <Controller
