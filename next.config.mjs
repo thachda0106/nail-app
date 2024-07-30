@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const cspHeader = `
-  default-src 'self';
+  default-src 'self' https://www.google.com/;
   script-src 'self' 'unsafe-eval' 'unsafe-inline';
   style-src 'self' fonts.googleapis.com 'unsafe-inline';
   img-src 'self' blob: data:;
@@ -31,17 +31,6 @@ const nextConfig = {
   images: {
     deviceSizes: [480, 768, 1024, 1280, 1440],
   },
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-
-  ],
 };
 
 export default nextConfig;

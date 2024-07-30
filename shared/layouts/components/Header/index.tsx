@@ -74,6 +74,7 @@ const Header = () => {
                 src={logoPath}
                 fetchPriority="high"
                 alt="logo"
+                priority
                 onClick={() => router.push("/")}
               />
             </Box>
