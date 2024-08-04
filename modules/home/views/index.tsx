@@ -3,15 +3,7 @@ import dynamic from "next/dynamic";
 
 const Banner = dynamic(() => import("../components/Banner"));
 const About = dynamic(() => import("../components/About"));
-const SkillNailArt = dynamic(() => import("../components/SkillNailArt"));
-const TimeWorking = dynamic(() => import("../components/TimeWorking"));
-const ShiningFeminine = dynamic(() => import("../components/About"));
-const Price = dynamic(() => import("../components/Price"));
-const BookingOffer = dynamic(() => import("../components/BookingOffer"));
-const BeautifulGallery = dynamic(() => import("../components/BeautifulGallery"));
-const RevealColourful = dynamic(() => import("../components/RevealColourful"));
-const Feedback = dynamic(() => import("../components/Feedback"));
-const Booking = dynamic(() => import("../components/Booking"));
+const HomeCSRComponents = dynamic(() => import("../components/ClientComponents"));
 
 import { IPageContext } from "@/shared/types/context";
 
@@ -22,15 +14,7 @@ const Home: React.FC<IPageContext> = ({ searchParams }) => {
     <Stack component={"div"} justifyItems={"center"} alignItems={"center"}>
       <Banner device={device} />
       <About />
-      <SkillNailArt />
-      <TimeWorking />
-      <ShiningFeminine />
-      <Price />
-      <BookingOffer />
-      <BeautifulGallery />
-      <RevealColourful />
-      <Feedback />
-      <Booking />
+      <HomeCSRComponents />
     </Stack>
   );
 };
