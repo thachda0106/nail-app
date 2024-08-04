@@ -1,7 +1,7 @@
 "use client";
 
 import { Box } from "@mui/material";
-import React, { useRef } from "react";
+import React from "react";
 import AvatarImage from "@assets/images/avatar.jpg";
 import {
   ABOUT_DESCRIPTION,
@@ -11,7 +11,7 @@ import {
   ABOUT_LABEL,
   ABOUT_TITLE,
 } from "@constants/common";
-import SectionContent from "../SectionContent";
+import SectionContent from "../ClientComponents/SectionContent";
 
 const About = () => {
   return (
