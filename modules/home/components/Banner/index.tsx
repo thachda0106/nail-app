@@ -2,8 +2,7 @@
 
 import { Box, Button, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import React, { useRef } from "react";
-import BannerImage from "@assets/images/banner.png";
+import React from "react";
 import {
   ABOUT_ID_HREF,
   BANNER_BUTTON,
@@ -97,7 +96,7 @@ const Banner: React.FC<PropsType> = ({ device }) => {
             )}
           >
             <Image
-              src={BannerImage}
+              src={'/assets/images/banner.png'}
               fill
               alt={"banner_image"}
               className={"object-contain fill-transparent"}

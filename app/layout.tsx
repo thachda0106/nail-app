@@ -1,10 +1,24 @@
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import { Catamaran, Lora } from "next/font/google";
-import MainLayout from "@/shared/layouts/Main.layout";
 import AppTheme from "@themes/default.theme";
 import clsx from "clsx";
-import { ToastContainer } from "react-toastify";
 import { META_DATA } from "@/shared/constants/storeInformation";
+
+const MainLayout = dynamic(() =>
+  import(
+    /* webpackMode: "lazy" */
+    /* webpackFetchPriority: "low" */
+    "@/shared/layouts/Main.layout"
+  )
+);
+const ToastContainer = dynamic(() =>
+  import(
+    /* webpackMode: "lazy" */
+    /* webpackFetchPriority: "low" */
+    "react-toastify"
+  ).then((m) => m.ToastContainer)
+);
 
 import "reset-css";
 import "react-toastify/dist/ReactToastify.css";
@@ -44,7 +58,9 @@ export default function RootLayout({
         )}
       >
         <AppTheme>
-          <ToastContainer position="top-right" autoClose={3000} />
+          {globalThis?.document && (
+            <ToastContainer position="top-right" autoClose={3000} />
+          )}
           <MainLayout>
             <main>{children}</main>
           </MainLayout>

@@ -9,8 +9,8 @@ import { Controller } from "react-hook-form";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { priceGroupedOptions } from "@/shared/constants/services";
+import SelectGroup from "@/shared/components/SelectGroup";
 
-import SelectGroup from "../SelectGroup";
 
 const FormBooking = () => {
   const { control, handleSubmit, onSubmit, isValid, isSubmitting } =
