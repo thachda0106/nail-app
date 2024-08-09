@@ -3,7 +3,6 @@
 import { Box } from "@mui/material";
 import React, { useRef } from "react";
 import SectionContent from "../SectionContent";
-import Smile from "@assets/images/smile2.jpg";
 import {
   REVEAL_COLOURFUL_DESCRIPTION,
   REVEAL_COLOURFUL_ID_HREF,
@@ -39,7 +38,7 @@ const RevealColourful = () => {
         description={REVEAL_COLOURFUL_DESCRIPTION}
         listTitle={REVEAL_COLOURFUL_LIST_TITLE}
         listItem={[REVEAL_COLOURFUL_ITEM_1, REVEAL_COLOURFUL_ITEM_2]}
-        imageSrc={Smile}
+        imageSrc={'/assets/images/smile2.jpg'}
       />
     </Box>
   );

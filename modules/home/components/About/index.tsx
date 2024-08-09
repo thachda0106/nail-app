@@ -2,7 +2,6 @@
 
 import { Box } from "@mui/material";
 import React from "react";
-import AvatarImage from "@assets/images/avatar.jpg";
 import {
   ABOUT_DESCRIPTION,
   ABOUT_ID_HREF,
@@ -21,7 +20,7 @@ const About = () => {
       id={ABOUT_ID_HREF}
     >
       <SectionContent
-        imageSrc={AvatarImage}
+        imageSrc={'/assets/images/avatar.jpg'}
         title={ABOUT_TITLE}
         label={ABOUT_LABEL}
         description={ABOUT_DESCRIPTION}

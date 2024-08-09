@@ -14,9 +14,6 @@ import {
 } from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
 import React, { Fragment, useRef } from "react";
-import ManicureImage from "@assets/images/manicure.svg";
-import EyeslashImage from "@assets/images/eyeslash.svg";
-import WaxingImage from "@assets/images/waxing.svg";
 import Image from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
@@ -25,16 +22,20 @@ import { useViewPort } from "@/shared/hooks/useViewPort";
 
 const BeautifulList = [
   {
-    image: ManicureImage,
+    image: "assets/images/manicure.svg",
     label: SKILL_NAIL_ART_OPTIONS_1,
     href: MANICURE_ID_HREF,
   },
   {
-    image: EyeslashImage,
+    image: "/assets/images/eyeslash.svg",
     label: SKILL_NAIL_ART_OPTIONS_2,
     href: EYESLASH_ID_HREF,
   },
-  { image: WaxingImage, label: SKILL_NAIL_ART_OPTIONS_3, href: WAXING_ID_HREF },
+  {
+    image: "/assets/images/waxing.svg",
+    label: SKILL_NAIL_ART_OPTIONS_3,
+    href: WAXING_ID_HREF,
+  },
 ];
 
 const SkillNailArt = () => {

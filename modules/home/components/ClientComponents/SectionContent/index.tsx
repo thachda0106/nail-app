@@ -1,11 +1,11 @@
 import { Box, List, ListItem, Stack, Typography } from "@mui/material";
 import React, { useRef } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import clsx from "clsx";
 import { useViewPort } from "@/shared/hooks/useViewPort";
 
 type SectionContentProps = {
-  imageSrc: StaticImageData;
+  imageSrc: string;
   label?: string;
   title?: string;
   description?: string;

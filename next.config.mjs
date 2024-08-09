@@ -32,6 +32,7 @@ const nextConfig = {
     deviceSizes: [480, 768, 1024, 1280, 1440],
     minimumCacheTTL: 86400,
     formats: ['image/avif', 'image/webp'],
+    disableStaticImages: true,
   },
 };
 

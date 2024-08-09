@@ -15,8 +15,6 @@ import { useRouter } from "next/navigation";
 import { STORE_INFORMATION } from "@/shared/constants/storeInformation";
 import { scrollToElementById } from "@/shared/utils/scroll";
 import { useWindowScrollPositions } from "@/shared/hooks/useWindowScrollPositions";
-import LogoWhite from "@/public/assets/images/main-logo-white.svg";
-import LogoBlack from "@/public/assets/images/main-logo-black.svg";
 import clsx from "clsx";
 
 const SCROLL_THRESHOLD = 70;
@@ -28,7 +26,7 @@ const Header = () => {
   const router = useRouter();
   const CurrentMenuIcon = isOpenMenu ? MenuOpenIcon : MenuIcon;
   const toggleClassNames = scrollY >= SCROLL_THRESHOLD;
-  const logoPath = toggleClassNames ? LogoBlack : LogoWhite;
+  const logoPath = `/assets/images/${toggleClassNames ? 'main-logo-white.svg' : 'main-logo-black.svg'}`;
 
   return (
     <>

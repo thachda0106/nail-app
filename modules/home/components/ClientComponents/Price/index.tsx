@@ -7,7 +7,6 @@ import {
 } from "@constants/common";
 import { Box, Stack, Typography } from "@mui/material";
 import React, { useRef } from "react";
-import Gel from "@assets/images/nails_polish.png";
 import Image from "next/image";
 import { PRICES } from "@/shared/constants/services";
 import { useViewPort } from "@/shared/hooks/useViewPort";
@@ -92,7 +91,7 @@ const Price = () => {
     >
       <Stack className="flex-col-reverse lg:flex-row items-center gap-8 xl:gap-16 w-full">
         <Box className="w-full lg:w-[50%] h-[200px] relative fade_in_left">
-          <Image src={Gel} alt="gel" fill className="h-auto object-fill" />
+          <Image src={'/assets/images/nails_polish.png'} alt="gel" fill className="h-auto object-fill" />
         </Box>
         <Box
           className={

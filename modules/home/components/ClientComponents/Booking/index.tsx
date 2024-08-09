@@ -1,6 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
-import BookingImage from "@assets/images/booking-1.jpg";
 import Image from "next/image";
 import FormBooking from "../FormBooking";
 import {
@@ -26,7 +25,7 @@ const Booking = () => {
         >
           <Box className={"relative w-full md:w-[45%] h-[300px] md:h-[600px]"}>
             <Image
-              src={BookingImage}
+              src={'/assets/images/booking-1.jpg'}
               fill
               alt={"image"}
               className={"object-cover md:object-contain"}

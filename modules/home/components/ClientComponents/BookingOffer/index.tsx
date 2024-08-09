@@ -1,7 +1,6 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
-import BackgroundImage from "@assets/images/background_booking.jpg";
 import Link from "next/link";
 import {
   BOOKING_ID_HREF,
@@ -15,7 +14,7 @@ const BookingOffer = () => {
   return (
     <Box component={"section"} className={"w-full h-[550px] relative mb-20"}>
       <Image
-        src={BackgroundImage}
+        src={'/assets/images/background_booking.jpg'}
         fill
         alt={"booking_offer"}
         className={"object-cover z-5"}

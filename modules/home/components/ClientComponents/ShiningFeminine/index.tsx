@@ -3,7 +3,7 @@
 import { Box } from "@mui/material";
 import React, { useRef } from "react";
 import SectionContent from "../SectionContent";
-import Smile from "@assets/images/smile.jpg";
+
 import {
   SHINING_FEMENINE_DESCRIPTION,
   SHINING_FEMENINE_ID,
@@ -39,7 +39,7 @@ const ShiningFeminine = () => {
         description={SHINING_FEMENINE_DESCRIPTION}
         listTitle={SHINING_FEMENINE_LIST_TITLE}
         listItem={[SHINING_FEMENINE_ITEM_1, SHINING_FEMENINE_ITEM_2]}
-        imageSrc={Smile}
+        imageSrc={'/assets/images/smile.jpg'}
         isReverse
       />
     </Box>
