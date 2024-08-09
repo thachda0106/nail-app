@@ -16,7 +16,7 @@ const About = dynamic(() =>
   )
 );
 const HomeCSRComponents = dynamic(() =>
-  /* webpackMode: "lazy" */
+  /* webpackMode: "lazy-once" */
   /* webpackFetchPriority: "low" */
   import("../components/ClientComponents")
 );
