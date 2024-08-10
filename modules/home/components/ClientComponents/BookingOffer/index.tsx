@@ -18,6 +18,7 @@ const BookingOffer = () => {
         fill
         alt={"booking_offer"}
         className={"object-cover z-5"}
+        sizes="100vw"
       />
       <Stack
         className={

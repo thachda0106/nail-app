@@ -94,6 +94,7 @@ const SkillNailArt = () => {
                     fill
                     alt={"beautiful_option"}
                     className={clsx("object-cover", styles.animationImage)}
+                    sizes="(max-width: 768px) 100vw, (min-width: 769px) 346px"
                   />
                 </Box>
 

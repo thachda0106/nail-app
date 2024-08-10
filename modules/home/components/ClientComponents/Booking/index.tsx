@@ -29,6 +29,7 @@ const Booking = () => {
               fill
               alt={"image"}
               className={"object-cover md:object-contain"}
+              sizes="(max-width: 768px) 100vw, (min-width: 769px) 486px"
             />
           </Box>
           <Box className={"flex flex-1 flex-col gap-2 xl:gap-4 w-full"}>

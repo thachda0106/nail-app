@@ -102,6 +102,7 @@ const Banner: React.FC<PropsType> = ({ device }) => {
               className={"object-contain fill-transparent"}
               fetchPriority="high"
               priority
+              sizes="(max-width: 768px) 100vw, (min-width: 769px) 540px"
             />
           </Box>
         </Stack>

@@ -18,20 +18,20 @@ const nextConfig = {
   headers() {
     return [
       {
-        source: '/:path*', 
+        source: "/:path*",
         headers: [
           {
-            key: 'Content-Security-Policy',
-            value: cspHeader.replace(/\n/g, ''),
+            key: "Content-Security-Policy",
+            value: cspHeader.replace(/\n/g, ""),
           },
         ],
       },
-    ]
+    ];
   },
   images: {
     deviceSizes: [480, 768, 1024, 1280, 1440],
-    minimumCacheTTL: 86400,
-    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 31536000,
+    formats: ["image/avif", "image/webp"],
     disableStaticImages: true,
   },
 };

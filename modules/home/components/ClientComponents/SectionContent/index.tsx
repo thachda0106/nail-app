@@ -50,9 +50,11 @@ const SectionContent: React.FC<SectionContentProps> = ({
           )}
         >
           <Image
+            fill
             src={imageSrc}
             alt={"image"}
             className={"object-contain h-auto"}
+            sizes="(max-width: 768px) 100vw, (min-width: 769px) 800px"
           />
         </Box>
         <Box

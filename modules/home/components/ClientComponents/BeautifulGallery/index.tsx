@@ -66,9 +66,10 @@ const BeautifulGallery = () => {
                 >
                   <Image
                     src={item.image}
-                    fill
                     alt={"beautiful_option"}
                     className={clsx("object-cover", styles.animationImage)}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (min-width: 769px) 244px"
                   />
                 </Box>
               </Box>

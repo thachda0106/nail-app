@@ -91,7 +91,13 @@ const Price = () => {
     >
       <Stack className="flex-col-reverse lg:flex-row items-center gap-8 xl:gap-16 w-full">
         <Box className="w-full lg:w-[50%] h-[200px] relative fade_in_left">
-          <Image src={'/assets/images/nails_polish.png'} alt="gel" fill className="h-auto object-fill" />
+          <Image
+            src={"/assets/images/nails_polish.png"}
+            alt="gel"
+            fill
+            className="h-auto object-fill"
+            sizes="(max-width: 768px) 100vw, (min-width: 769px) 508px"
+          />
         </Box>
         <Box
           className={
