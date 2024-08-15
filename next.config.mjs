@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+import withPWA from 'next-pwa';
 
 const cspHeader = `
   default-src 'self' https://www.google.com/;
@@ -36,4 +37,6 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withPWA({
+  dest: 'public'
+})(nextConfig);
