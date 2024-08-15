@@ -33,4 +33,5 @@ export const META_DATA: Metadata = {
     images: "https://nail-app.thachda0106.com/assets/images/logo-black.png",
     description: STORE_INFORMATION.Location.description,
   },
+  manifest: '/manifest.json'
 };

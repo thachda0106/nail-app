@@ -1,10 +1,3 @@
 import dynamic from "next/dynamic";
 
-export default dynamic(() =>
-  import(
-    /* webpackPreload: true */
-    /* webpackPrefetch: true */
-    /* webpackFetchPriority: "high" */
-    "@/modules/home/views"
-  )
-);
+export default dynamic(() => import("@/modules/home/views"));

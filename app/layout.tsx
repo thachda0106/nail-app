@@ -5,19 +5,9 @@ import AppTheme from "@themes/default.theme";
 import clsx from "clsx";
 import { META_DATA } from "@/shared/constants/storeInformation";
 
-const MainLayout = dynamic(() =>
-  import(
-    /* webpackMode: "lazy" */
-    /* webpackFetchPriority: "low" */
-    "@/shared/layouts/Main.layout"
-  )
-);
+const MainLayout = dynamic(() => import("@/shared/layouts/Main.layout"));
 const ToastContainer = dynamic(() =>
-  import(
-    /* webpackMode: "lazy" */
-    /* webpackFetchPriority: "low" */
-    "react-toastify"
-  ).then((m) => m.ToastContainer)
+  import("react-toastify").then((m) => m.ToastContainer)
 );
 
 import "reset-css";
@@ -58,7 +48,7 @@ export default function RootLayout({
         )}
       >
         <AppTheme>
-          {globalThis?.document && (
+          {globalThis.document && (
             <ToastContainer position="top-right" autoClose={3000} />
           )}
           <MainLayout>

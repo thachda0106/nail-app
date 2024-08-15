@@ -1,20 +1,8 @@
 import Stack from "@mui/material/Stack";
 import dynamic from "next/dynamic";
 
-const Banner = dynamic(() =>
-  import(
-    /* webpackFetchPriority: "high" */
-    /* webpackMode: "eager" */
-    "../components/Banner"
-  )
-);
-const About = dynamic(() =>
-  import(
-    /* webpackMode: "lazy" */
-    /* webpackFetchPriority: "low" */
-    "../components/About"
-  )
-);
+const Banner = dynamic(() => import("../components/Banner"));
+const About = dynamic(() => import("../components/About"));
 const HomeCSRComponents = dynamic(() =>
   /* webpackMode: "lazy-once" */
   /* webpackFetchPriority: "low" */
@@ -30,7 +18,7 @@ const Home: React.FC<IPageContext> = ({ searchParams }) => {
     <Stack component={"div"} justifyItems={"center"} alignItems={"center"}>
       <Banner device={device} />
       <About />
-      <HomeCSRComponents />
+      <HomeCSRComponents /> 
     </Stack>
   );
 };
