@@ -3,11 +3,7 @@ import dynamic from "next/dynamic";
 
 const Banner = dynamic(() => import("../components/Banner"));
 const About = dynamic(() => import("../components/About"));
-const HomeCSRComponents = dynamic(() =>
-  /* webpackMode: "lazy-once" */
-  /* webpackFetchPriority: "low" */
-  import("../components/ClientComponents")
-);
+const HomeCSRComponents = dynamic(() => import("../components/ClientComponents"));
 
 import { IPageContext } from "@/shared/types/context";
 
@@ -18,7 +14,7 @@ const Home: React.FC<IPageContext> = ({ searchParams }) => {
     <Stack component={"div"} justifyItems={"center"} alignItems={"center"}>
       <Banner device={device} />
       <About />
-      <HomeCSRComponents /> 
+      <HomeCSRComponents />
     </Stack>
   );
 };
