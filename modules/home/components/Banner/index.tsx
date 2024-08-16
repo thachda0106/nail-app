@@ -79,7 +79,7 @@ const Banner: React.FC<PropsType> = ({ device }) => {
                 "z-[100] w-[200px] h-12 text-white uppercase bg-pink-second border border-solid border-pink-second hover:border-white font-catamaran font-bold rounded-none tracking-[2px]"
               }
             >
-              <Link href={`#${SKILL_NAIL_ART_ID_HREF}`}>
+              <Link href={`#${SKILL_NAIL_ART_ID_HREF}`} prefetch={false}>
                 <Typography
                   fontFamily={"var(--font-catamaran)"}
                   fontSize={14}

@@ -1,14 +1,21 @@
 {
-  "name": "Floral Crush Beauty",
-  "short_name": "Floral_Crush_Beauty",
-  "description": "Enjoy personalized treatments and meticulous care designed to leave you feeling rejuvenated and beautiful.",
-  "start_url": "/",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "icons": [
-      {   "src": "/assets/images/logo-black.png",
-          "sizes": "192x192",
-          "type": "image/png"
-      }]
+    "name": "Floral Crush Beauty",
+    "short_name": "Floral_Crush_Beauty",
+    "description": "Enjoy personalized treatments and meticulous care designed to leave you feeling rejuvenated and beautiful.",
+    "start_url": "/",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/assets/icons/app-icon-192.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "/assets/icons/app-icon-512.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml"
+        }
+    ]
 }

@@ -69,7 +69,7 @@ const Footer = () => {
               Contacts
             </Typography>
             <Typography component={"p"} className="flex flex-col">
-              <Link href={`tel:${Contacts.phoneNumber}`}>
+              <Link href={`tel:${Contacts.phoneNumber}`} prefetch={false}>
                 <Typography
                   component={"span"}
                   className="text-gray-medium text-base underline min-h-[27px] block"
@@ -77,7 +77,7 @@ const Footer = () => {
                   {`ph: ${Contacts.phoneNumber}`}
                 </Typography>
               </Link>
-              <Link href={`mailto:${Contacts.email}`}>
+              <Link href={`mailto:${Contacts.email}`} prefetch={false}>
                 <Typography
                   component={"span"}
                   className="text-gray-medium text-base underline font-semibold min-h-[27px] block"
@@ -87,13 +87,13 @@ const Footer = () => {
               </Link>
             </Typography>
             <Stack component={"ul"} direction={"row"} gap={1}>
-              <Link href={Socials.Instagram} target="_blank">
+              <Link href={Socials.Instagram} target="_blank" prefetch={false}>
                 <InstagramIcon className="text-gray-icon text-[30px]" />
               </Link>
-              <Link href={Socials.Facebook} target="_blank">
+              <Link href={Socials.Facebook} target="_blank" prefetch={false}>
                 <FacebookIcon className="text-gray-icon text-[30px]" />
               </Link>
-              <Link href={Socials.Twitter} target="_blank">
+              <Link href={Socials.Twitter} target="_blank" prefetch={false}>
                 <XIcon className="text-gray-icon text-[30px]" />
               </Link>
             </Stack>

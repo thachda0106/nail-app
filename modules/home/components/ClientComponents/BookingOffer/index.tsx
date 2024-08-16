@@ -53,7 +53,7 @@ const BookingOffer = () => {
             "w-[200px] h-12 text-white uppercase bg-pink-second border border-solid border-pink-second hover:border-white font-catamaran font-bold rounded-none tracking-[2px] mt-10"
           }
         >
-          <Link href={`#${BOOKING_ID_HREF}`}>{BOOKING_OFFER_BUTTON}</Link>
+          <Link href={`#${BOOKING_ID_HREF}`} prefetch={false}>{BOOKING_OFFER_BUTTON}</Link>
         </Button>
       </Stack>
     </Box>
