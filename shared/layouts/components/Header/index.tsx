@@ -26,7 +26,7 @@ const Header = () => {
   const router = useRouter();
   const CurrentMenuIcon = isOpenMenu ? MenuOpenIcon : MenuIcon;
   const toggleClassNames = scrollY >= SCROLL_THRESHOLD;
-  const logoPath = `/assets/images/${toggleClassNames ? 'main-logo-white.svg' : 'main-logo-black.svg'}`;
+  const logoPath = `/assets/images/${toggleClassNames ? 'main-logo-black.svg' : 'main-logo-white.svg'}`;
 
   return (
     <>
