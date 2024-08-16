@@ -1,7 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
 import React from "react";
-import useClient from "@/shared/hooks/useClient";
 
 const SectionLoading = dynamic(() =>
   import("@/shared/components/SectionLoading")
@@ -72,12 +71,6 @@ const Booking = dynamic(
 );
 
 const HomeCSRComponents = () => {
-  const { isClient } = useClient();
-
-  if (!isClient) {
-    return <></>;
-  }
-
   return (
     <React.Fragment>
       <SkillNailArt />

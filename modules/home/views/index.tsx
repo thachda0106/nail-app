@@ -14,7 +14,7 @@ const Home: React.FC<IPageContext> = ({ searchParams }) => {
     <Stack component={"div"} justifyItems={"center"} alignItems={"center"}>
       <Banner device={device} />
       <About />
-      <HomeCSRComponents />
+      {/* <HomeCSRComponents /> */}
     </Stack>
   );
 };
