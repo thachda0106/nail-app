@@ -17,5 +17,14 @@
             "sizes": "512x512",
             "type": "image/svg+xml"
         }
+    ],
+    "screenshots": [
+        {
+         "src": "/assets/images/avatar.jpg",
+          "sizes": "800x700",
+          "type": "image/jpg",
+          "form_factor": "wide",
+          "label": "Wonder Widgets"
+        }
     ]
 }
