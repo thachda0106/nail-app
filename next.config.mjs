@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-import nextPwa from 'next-pwa';
+import withPWAInit from "@ducanh2912/next-pwa";
 
 const cspHeader = `
   default-src 'self' https://www.google.com/;
@@ -18,7 +18,7 @@ const cspHeader = `
 const nextConfig = {
   headers() {
     return [
-      { 
+      {
         source: "/:path*",
         headers: [
           {
@@ -38,7 +38,7 @@ const nextConfig = {
   swcMinify: true,
 };
 
-const withPWA = nextPwa({
+const withPWA = withPWAInit({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
   register: true,
