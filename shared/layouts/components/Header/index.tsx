@@ -62,6 +62,7 @@ const Header = () => {
               <Link
                 href={`tel:${STORE_INFORMATION.Contacts.phoneNumber}`}
                 className="self-center"
+                aria-label="phone number"
               >
                 <PhoneIcon className="text-gray-icon text-[30px]" />
               </Link>

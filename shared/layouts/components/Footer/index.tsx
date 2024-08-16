@@ -86,14 +86,29 @@ const Footer = () => {
                 </Typography>
               </Link>
             </Typography>
-            <Stack component={"ul"} direction={"row"} gap={1}>
-              <Link href={Socials.Instagram} target="_blank" prefetch={false}>
+            <Stack component={"nav"} direction={"row"} gap={1}>
+              <Link
+                href={Socials.Instagram}
+                target="_blank"
+                prefetch={false}
+                aria-label="instagram link"
+              >
                 <InstagramIcon className="text-gray-icon text-[30px]" />
               </Link>
-              <Link href={Socials.Facebook} target="_blank" prefetch={false}>
+              <Link
+                href={Socials.Facebook}
+                target="_blank"
+                prefetch={false}
+                aria-label="facebook link"
+              >
                 <FacebookIcon className="text-gray-icon text-[30px]" />
               </Link>
-              <Link href={Socials.Twitter} target="_blank" prefetch={false}>
+              <Link
+                href={Socials.Twitter}
+                target="_blank"
+                prefetch={false}
+                aria-label="twitter link"
+              >
                 <XIcon className="text-gray-icon text-[30px]" />
               </Link>
             </Stack>
@@ -124,6 +139,7 @@ const Footer = () => {
             className="h-[300px] md:h-[150px] w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-3*24px)/4)]"
           >
             <iframe
+              title="Store GM address"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.0889574698454!2d-64.92211322340223!3d47.48818037117922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4c9f49029544b609%3A0xe0f933a4f176a1b9!2s4093%20Rue%20Principale%2C%20Tracadie-Sheila%2C%20NB%20E1X%201B8%2C%20Canada!5e0!3m2!1svi!2s!4v1721538546191!5m2!1svi!2s"
               width={"100%"}
               height={"100%"}
